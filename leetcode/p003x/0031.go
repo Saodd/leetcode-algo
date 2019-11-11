@@ -1,6 +1,7 @@
 package p003x
 
 import (
+	"fmt"
 	"github.com/Saodd/leetcode-algo/common"
 )
 
@@ -23,6 +24,7 @@ import (
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
 func NextPermutation(nums []int) {
+	fmt.Println()
 	if len(nums) < 2 {
 		return
 	}
