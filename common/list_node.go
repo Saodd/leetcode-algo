@@ -36,8 +36,14 @@ func CreateListInt(li []int) *ListNode {
 }
 
 func PrintListInt(x *ListNode) {
-	for x != nil {
-		fmt.Print(x.Val, ' ')
+	count := 0
+	for ; x != nil; x = x.Next {
+		fmt.Printf("%d ", x.Val)
+		count++
+		if count == 100 {
+			fmt.Print("...")
+			break
+		}
 	}
-	fmt.Print('\n')
+	fmt.Println()
 }

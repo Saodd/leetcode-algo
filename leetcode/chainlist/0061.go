@@ -1,4 +1,4 @@
-package p006x
+package chainlist
 
 import "github.com/Saodd/leetcode-algo/common"
 
