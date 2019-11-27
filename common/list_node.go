@@ -7,7 +7,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func IsEqualListInt(a, b *ListNode) bool {
+func IsEqualListChain(a, b *ListNode) bool {
 	for a != nil && b != nil {
 		if a.Val != b.Val {
 			return false
@@ -22,7 +22,7 @@ func IsEqualListInt(a, b *ListNode) bool {
 	return true
 }
 
-func CreateListInt(li []int) *ListNode {
+func CreateListChain(li []int) *ListNode {
 	if li == nil || len(li) == 0 {
 		return nil
 	}
@@ -35,7 +35,7 @@ func CreateListInt(li []int) *ListNode {
 	return head.Next
 }
 
-func PrintListInt(x *ListNode) {
+func PrintListChain(x *ListNode) {
 	count := 0
 	for ; x != nil; x = x.Next {
 		fmt.Printf("%d ", x.Val)
@@ -46,4 +46,26 @@ func PrintListInt(x *ListNode) {
 		}
 	}
 	fmt.Println()
+}
+
+// CreateListChainCycle 负责创建一个带环的链表。
+// 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。
+// 如果 pos 是 -1，则在该链表中没有环。
+func CreateListChainCycle(li []int, pos int) *ListNode {
+	if pos >= len(li) {
+		panic("错误的输入！pos应该小于li的长度！")
+	}
+	head := CreateListChain(li)
+	if pos >= 0 {
+		var insectNode *ListNode
+		var currentNode = &ListNode{Next: head}
+		for p := range li {
+			currentNode = currentNode.Next
+			if p == pos {
+				insectNode = currentNode
+			}
+		}
+		currentNode.Next = insectNode
+	}
+	return head
 }

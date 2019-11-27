@@ -17,7 +17,7 @@ func Test_sortedListToBST(t *testing.T) {
 	}{
 		{
 			name: "示例1",
-			args: args{common.CreateListInt([]int{-10, -3, 0, 5, 9})},
+			args: args{common.CreateListChain([]int{-10, -3, 0, 5, 9})},
 			want: &common.TreeNode{
 				Val:   0,
 				Left:  &common.TreeNode{Val: -10, Right: &common.TreeNode{Val: -3}},

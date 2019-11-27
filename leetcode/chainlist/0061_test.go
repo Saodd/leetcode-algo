@@ -18,13 +18,13 @@ func Test_rotateRight(t *testing.T) {
 	}{
 		{
 			name: "示例1",
-			args: args{common.CreateListInt([]int{1, 2, 3, 4, 5}), 2},
-			want: common.CreateListInt([]int{4, 5, 1, 2, 3}),
+			args: args{common.CreateListChain([]int{1, 2, 3, 4, 5}), 2},
+			want: common.CreateListChain([]int{4, 5, 1, 2, 3}),
 		},
 		{
 			name: "示例2",
-			args: args{common.CreateListInt([]int{0, 1, 2}), 4},
-			want: common.CreateListInt([]int{2, 0, 1}),
+			args: args{common.CreateListChain([]int{0, 1, 2}), 4},
+			want: common.CreateListChain([]int{2, 0, 1}),
 		},
 	}
 	for _, tt := range tests {

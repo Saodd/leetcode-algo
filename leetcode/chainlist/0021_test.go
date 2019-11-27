@@ -17,20 +17,20 @@ func Test_mergeTwoLists(t *testing.T) {
 		want *common.ListNode
 	}{
 		{
-			args: args{common.CreateListInt([]int{1, 2, 3}), common.CreateListInt([]int{4, 5, 6})},
-			want: common.CreateListInt([]int{1, 2, 3, 4, 5, 6}),
+			args: args{common.CreateListChain([]int{1, 2, 3}), common.CreateListChain([]int{4, 5, 6})},
+			want: common.CreateListChain([]int{1, 2, 3, 4, 5, 6}),
 		},
 		{
-			args: args{common.CreateListInt([]int{1, 5, 6}), common.CreateListInt([]int{2, 3, 4})},
-			want: common.CreateListInt([]int{1, 2, 3, 4, 5, 6}),
+			args: args{common.CreateListChain([]int{1, 5, 6}), common.CreateListChain([]int{2, 3, 4})},
+			want: common.CreateListChain([]int{1, 2, 3, 4, 5, 6}),
 		},
 		{
-			args: args{common.CreateListInt([]int{1, 2, 3}), common.CreateListInt([]int{})},
-			want: common.CreateListInt([]int{1, 2, 3}),
+			args: args{common.CreateListChain([]int{1, 2, 3}), common.CreateListChain([]int{})},
+			want: common.CreateListChain([]int{1, 2, 3}),
 		},
 		{
-			args: args{common.CreateListInt([]int{}), common.CreateListInt([]int{})},
-			want: common.CreateListInt([]int{}),
+			args: args{common.CreateListChain([]int{}), common.CreateListChain([]int{})},
+			want: common.CreateListChain([]int{}),
 		},
 	}
 	for _, tt := range tests {

@@ -18,8 +18,8 @@ func Test_partition(t *testing.T) {
 	}{
 		{
 			name: "示例1",
-			args: args{common.CreateListInt([]int{1, 4, 3, 2, 5, 2}), 3},
-			want: common.CreateListInt([]int{1, 2, 2, 4, 3, 5}),
+			args: args{common.CreateListChain([]int{1, 4, 3, 2, 5, 2}), 3},
+			want: common.CreateListChain([]int{1, 2, 2, 4, 3, 5}),
 		},
 	}
 	for _, tt := range tests {
