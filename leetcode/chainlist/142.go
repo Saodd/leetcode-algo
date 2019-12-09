@@ -44,25 +44,19 @@ func detectCycle(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return nil
 	}
-	// 找到相遇节点
-	var insect *ListNode
-	var slow, fast *ListNode = head, head.Next
-	for fast != nil && fast.Next != nil {
-		if slow == fast {
-			insect = slow
-			break
+	var slow, fast = head, head.Next
+	for slow != fast {
+		if fast == nil || fast.Next == nil {
+			return nil
 		}
 		slow = slow.Next
 		fast = fast.Next.Next
 	}
-	if insect == nil {
-		return nil
+	fast = fast.Next
+	slow = head
+	for slow != fast {
+		slow = slow.Next
+		fast = fast.Next
 	}
-	// 从相遇节点出发，找到循环点
-	insect = insect.Next // 因为head从第一个节点出发，因此insect也要多走一个点
-	for head != insect {
-		head = head.Next
-		insect = insect.Next
-	}
-	return head
+	return slow
 }
