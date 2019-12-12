@@ -46,4 +46,5 @@ func oddEvenList(head *ListNode) *ListNode {
 	odd.Next = evenHead.Next
 	even.Next = nil
 	return oddHead.Next
+	// 手写完成时间：5'20"
 }
