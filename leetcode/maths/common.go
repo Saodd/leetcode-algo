@@ -11,3 +11,13 @@ func Factorial(n int) int {
 	}
 	return result
 }
+
+// Gcd 负责计算最大公约数
+func Gcd(x, y int) int {
+	tmp := x % y
+	if tmp > 0 {
+		return Gcd(y, tmp)
+	} else {
+		return y
+	}
+}
