@@ -1,4 +1,4 @@
-package array
+package maths
 
 /*
 66. 加一
