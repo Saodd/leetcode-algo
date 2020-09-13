@@ -1,6 +1,6 @@
 package common
 
-// 快速排序 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 快速排序1：用栈实现的超复杂版本 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 func QuickSortInt(li []int) {
 	if len(li) == 0 {
 		return
@@ -90,4 +90,62 @@ func (s *quickSortStackInt) Pop() (int, int, error) {
 	return x, y, nil
 }
 
-// 快速排序 结束 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// 快速排序1 结束 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// 快速排序2：不要用栈，只加了选择排序的基础版快排（反转排序） >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+func QuickSortIntRev(li []int) {
+	quickSortIntRev(li, 0, len(li)-1)
+}
+
+func quickSortIntRev(li []int, lo, hi int) {
+	if hi-lo < 5 {
+		quickSortIntSelectSortRev(li, lo, hi)
+		return
+	}
+	mid := quickSortIntPartitionRev(li, lo, hi)
+	quickSortIntRev(li, lo, mid-1)
+	quickSortIntRev(li, mid+1, hi)
+}
+
+func quickSortIntPartitionRev(li []int, lo, hi int) (mid int) {
+	l, r := lo, hi
+	midValue := li[lo] // 比较处
+	for l < r {
+		for l <= hi {
+			if li[l] < midValue { // 比较处
+				break
+			}
+			l++
+		}
+		for r >= lo {
+			if li[r] >= midValue { // 比较处
+				break
+			}
+			r--
+		}
+		if l < r {
+			li[l], li[r] = li[r], li[l]
+		} else {
+			break
+		}
+	}
+	li[lo], li[r] = li[r], li[lo]
+	return r
+}
+
+func quickSortIntSelectSortRev(li []int, lo, hi int) {
+	var min int
+	for ; lo < hi; lo++ {
+		min = lo
+		for i := lo + 1; i <= hi; i++ {
+			if li[i] > li[min] { // 比较处
+				min = i
+			}
+		}
+		if lo != min {
+			li[lo], li[min] = li[min], li[lo]
+		}
+	}
+}
+
+// 快速排序2 结束 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
