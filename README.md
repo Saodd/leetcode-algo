@@ -1,6 +1,6 @@
 # leetcode-algo
 
-![Github-Actions](https://github.com/Saodd/leetcode-algo/workflows/Go/badge.svg?branch=master)
+[![Github-Actions](https://github.com/Saodd/leetcode-algo/workflows/Go/badge.svg?branch=master)](https://saodd.github.io/leetcode-algo/coverage.html)
 
 版权声明：
 
