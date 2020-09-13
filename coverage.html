@@ -1,0 +1,3928 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>common: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/Saodd/leetcode-algo/common/array.go (50.0%)</option>
+				
+				<option value="file1">github.com/Saodd/leetcode-algo/common/list_node.go (0.0%)</option>
+				
+				<option value="file2">github.com/Saodd/leetcode-algo/common/maths.go (90.0%)</option>
+				
+				<option value="file3">github.com/Saodd/leetcode-algo/common/quick_sort.go (58.4%)</option>
+				
+				<option value="file4">github.com/Saodd/leetcode-algo/common/tree_node.go (0.0%)</option>
+				
+				<option value="file5">github.com/Saodd/leetcode-algo/leetcode/p0/0021.go (95.2%)</option>
+				
+				<option value="file6">github.com/Saodd/leetcode-algo/leetcode/p0/0031.go (61.0%)</option>
+				
+				<option value="file7">github.com/Saodd/leetcode-algo/leetcode/p0/0033.go (86.1%)</option>
+				
+				<option value="file8">github.com/Saodd/leetcode-algo/leetcode/p0/0034.go (43.3%)</option>
+				
+				<option value="file9">github.com/Saodd/leetcode-algo/leetcode/p0/0035.go (100.0%)</option>
+				
+				<option value="file10">github.com/Saodd/leetcode-algo/leetcode/p0/0036.go (100.0%)</option>
+				
+				<option value="file11">github.com/Saodd/leetcode-algo/leetcode/p0/0039.go (94.7%)</option>
+				
+				<option value="file12">github.com/Saodd/leetcode-algo/leetcode/p0/0040.go (96.6%)</option>
+				
+				<option value="file13">github.com/Saodd/leetcode-algo/leetcode/p0/0043.go (100.0%)</option>
+				
+				<option value="file14">github.com/Saodd/leetcode-algo/leetcode/p0/0046.go (93.3%)</option>
+				
+				<option value="file15">github.com/Saodd/leetcode-algo/leetcode/p0/0047.go (100.0%)</option>
+				
+				<option value="file16">github.com/Saodd/leetcode-algo/leetcode/p0/0048.go (87.5%)</option>
+				
+				<option value="file17">github.com/Saodd/leetcode-algo/leetcode/p0/0049.go (0.0%)</option>
+				
+				<option value="file18">github.com/Saodd/leetcode-algo/leetcode/p0/0050.go (100.0%)</option>
+				
+				<option value="file19">github.com/Saodd/leetcode-algo/leetcode/p0/0051.go (100.0%)</option>
+				
+				<option value="file20">github.com/Saodd/leetcode-algo/leetcode/p0/0053.go (90.9%)</option>
+				
+				<option value="file21">github.com/Saodd/leetcode-algo/leetcode/p0/0054.go (96.2%)</option>
+				
+				<option value="file22">github.com/Saodd/leetcode-algo/leetcode/p0/0055.go (90.9%)</option>
+				
+				<option value="file23">github.com/Saodd/leetcode-algo/leetcode/p0/0056.go (90.0%)</option>
+				
+				<option value="file24">github.com/Saodd/leetcode-algo/leetcode/p0/0058.go (100.0%)</option>
+				
+				<option value="file25">github.com/Saodd/leetcode-algo/leetcode/p0/0060.go (100.0%)</option>
+				
+				<option value="file26">github.com/Saodd/leetcode-algo/leetcode/p0/0061.go (85.7%)</option>
+				
+				<option value="file27">github.com/Saodd/leetcode-algo/leetcode/p0/0062.go (52.3%)</option>
+				
+				<option value="file28">github.com/Saodd/leetcode-algo/leetcode/p0/0063.go (95.8%)</option>
+				
+				<option value="file29">github.com/Saodd/leetcode-algo/leetcode/p0/0064.go (22.2%)</option>
+				
+				<option value="file30">github.com/Saodd/leetcode-algo/leetcode/p0/0066.go (100.0%)</option>
+				
+				<option value="file31">github.com/Saodd/leetcode-algo/leetcode/p0/0067.go (85.2%)</option>
+				
+				<option value="file32">github.com/Saodd/leetcode-algo/leetcode/p0/0069.go (91.7%)</option>
+				
+				<option value="file33">github.com/Saodd/leetcode-algo/leetcode/p0/0070.go (26.1%)</option>
+				
+				<option value="file34">github.com/Saodd/leetcode-algo/leetcode/p0/0071.go (100.0%)</option>
+				
+				<option value="file35">github.com/Saodd/leetcode-algo/leetcode/p0/0073.go (97.0%)</option>
+				
+				<option value="file36">github.com/Saodd/leetcode-algo/leetcode/p0/0074.go (100.0%)</option>
+				
+				<option value="file37">github.com/Saodd/leetcode-algo/leetcode/p0/0075.go (93.8%)</option>
+				
+				<option value="file38">github.com/Saodd/leetcode-algo/leetcode/p0/0077.go (100.0%)</option>
+				
+				<option value="file39">github.com/Saodd/leetcode-algo/leetcode/p0/0082.go (46.2%)</option>
+				
+				<option value="file40">github.com/Saodd/leetcode-algo/leetcode/p0/0086.go (100.0%)</option>
+				
+				<option value="file41">github.com/Saodd/leetcode-algo/leetcode/p0/0092.go (93.3%)</option>
+				
+				<option value="file42">github.com/Saodd/leetcode-algo/leetcode/p1/0109.go (100.0%)</option>
+				
+				<option value="file43">github.com/Saodd/leetcode-algo/leetcode/p1/0121.go (100.0%)</option>
+				
+				<option value="file44">github.com/Saodd/leetcode-algo/leetcode/p1/0141.go (100.0%)</option>
+				
+				<option value="file45">github.com/Saodd/leetcode-algo/leetcode/p1/0148.go (97.4%)</option>
+				
+				<option value="file46">github.com/Saodd/leetcode-algo/leetcode/p1/0160.go (0.0%)</option>
+				
+				<option value="file47">github.com/Saodd/leetcode-algo/leetcode/p1/142.go (92.9%)</option>
+				
+				<option value="file48">github.com/Saodd/leetcode-algo/leetcode/p3/0328.go (100.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package common
+
+// MinInt 找出两个整形中更小的值。
+func MinInt(x, y int) int <span class="cov0" title="0">{
+        if x &gt; y </span><span class="cov0" title="0">{
+                return y
+        }</span>
+        <span class="cov0" title="0">return x</span>
+}
+
+// IntArrayBinaryFind 数组中二分查找，返回目标值所在的索引，不存在则返回-1。
+func IntArrayBinaryFind(list []int, target int) (index int) <span class="cov8" title="1">{
+        var left, right = 0, len(list) - 1
+        for right &gt;= left </span><span class="cov8" title="1">{
+                index = (left + right) / 2
+                if target &lt; list[index] </span><span class="cov0" title="0">{
+                        right = index - 1
+                }</span> else<span class="cov8" title="1"> if target &gt; list[index] </span><span class="cov0" title="0">{
+                        left = index + 1
+                }</span> else<span class="cov8" title="1"> {
+                        return index
+                }</span>
+        }
+        <span class="cov0" title="0">return -1</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package common
+
+import "fmt"
+
+type ListNode struct {
+        Val  int
+        Next *ListNode
+}
+
+func IsEqualListChain(a, b *ListNode) bool <span class="cov0" title="0">{
+        for a != nil &amp;&amp; b != nil </span><span class="cov0" title="0">{
+                if a.Val != b.Val </span><span class="cov0" title="0">{
+                        return false
+                }</span>
+                <span class="cov0" title="0">a = a.Next
+                b = b.Next</span>
+        }
+        // 必须同时为nil
+        <span class="cov0" title="0">if a != b </span><span class="cov0" title="0">{
+                return false
+        }</span>
+        <span class="cov0" title="0">return true</span>
+}
+
+func CreateListChain(li []int) *ListNode <span class="cov0" title="0">{
+        if li == nil || len(li) == 0 </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+        <span class="cov0" title="0">var head = &amp;ListNode{}
+        var tail = head
+        for _, val := range li </span><span class="cov0" title="0">{
+                tail.Next = &amp;ListNode{Val: val}
+                tail = tail.Next
+        }</span>
+        <span class="cov0" title="0">return head.Next</span>
+}
+
+func PrintListChain(x *ListNode) <span class="cov0" title="0">{
+        count := 0
+        for ; x != nil; x = x.Next </span><span class="cov0" title="0">{
+                fmt.Printf("%d ", x.Val)
+                count++
+                if count == 100 </span><span class="cov0" title="0">{
+                        fmt.Print("...")
+                        break</span>
+                }
+        }
+        <span class="cov0" title="0">fmt.Println()</span>
+}
+
+// CreateListChainCycle 负责创建一个带环的链表。
+// 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。
+// 如果 pos 是 -1，则在该链表中没有环。
+func CreateListChainCycle(li []int, pos int) *ListNode <span class="cov0" title="0">{
+        if pos &gt;= len(li) </span><span class="cov0" title="0">{
+                panic("错误的输入！pos应该小于li的长度！")</span>
+        }
+        <span class="cov0" title="0">head := CreateListChain(li)
+        if pos &gt;= 0 </span><span class="cov0" title="0">{
+                var insectNode *ListNode
+                var currentNode = &amp;ListNode{Next: head}
+                for p := range li </span><span class="cov0" title="0">{
+                        currentNode = currentNode.Next
+                        if p == pos </span><span class="cov0" title="0">{
+                                insectNode = currentNode
+                        }</span>
+                }
+                <span class="cov0" title="0">currentNode.Next = insectNode</span>
+        }
+        <span class="cov0" title="0">return head</span>
+}
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package common
+
+// Factorial 负责计算n的阶乘
+func Factorial(n int) int <span class="cov8" title="1">{
+        if n &lt; 1 </span><span class="cov0" title="0">{
+                return 1
+        }</span>
+        <span class="cov8" title="1">var result int = 1
+        for ; n &gt; 1; n-- </span><span class="cov8" title="1">{
+                result *= n
+        }</span>
+        <span class="cov8" title="1">return result</span>
+}
+
+// Gcd 负责计算最大公约数
+func Gcd(x, y int) int <span class="cov8" title="1">{
+        tmp := x % y
+        if tmp &gt; 0 </span><span class="cov8" title="1">{
+                return Gcd(y, tmp)
+        }</span> else<span class="cov8" title="1"> {
+                return y
+        }</span>
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package common
+
+// 快速排序1：用栈实现的超复杂版本 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+func QuickSortInt(li []int) <span class="cov8" title="1">{
+        if len(li) == 0 </span><span class="cov0" title="0">{
+                return
+        }</span>
+        <span class="cov8" title="1">quickSortInt(li, 0, len(li)-1)</span>
+}
+
+func quickSortInt(li []int, lo, hi int) <span class="cov8" title="1">{
+        stack := quickSortStackInt{}
+        stack.Push(lo, hi)
+        for stack.Len() &gt; 0 </span><span class="cov8" title="1">{
+                x, y, _ := stack.Pop()
+                mid := quickSortIntPartition(li, x, y)
+                if mid-x &gt; 15 </span><span class="cov8" title="1">{
+                        stack.Push(x, mid-1)
+                }</span> else<span class="cov8" title="1"> if mid-x &gt; 1 </span><span class="cov8" title="1">{
+                        quickSortIntSelectSort(li, x, mid-1)
+                }</span>
+                <span class="cov8" title="1">if y-mid &gt; 15 </span><span class="cov8" title="1">{
+                        stack.Push(mid+1, y)
+                }</span> else<span class="cov8" title="1"> if y-mid &gt; 1 </span><span class="cov8" title="1">{
+                        quickSortIntSelectSort(li, mid+1, y)
+                }</span>
+        }
+}
+
+func quickSortIntPartition(li []int, lo, hi int) (mid int) <span class="cov8" title="1">{
+        l, r := lo, hi
+        //li[lo], li[(lo+hi)/2] = li[(lo+hi)/2], li[lo]
+        midValue := li[lo]
+        for l &lt; r </span><span class="cov8" title="1">{
+                for l &lt;= hi </span><span class="cov8" title="1">{ // 找大的
+                        if li[l] &gt; midValue </span><span class="cov8" title="1">{
+                                break</span>
+                        }
+                        <span class="cov8" title="1">l++</span>
+                }
+                <span class="cov8" title="1">for r &gt;= lo </span><span class="cov8" title="1">{
+                        if li[r] &lt;= midValue </span><span class="cov8" title="1">{
+                                break</span>
+                        }
+                        <span class="cov8" title="1">r--</span>
+                }
+                <span class="cov8" title="1">if l &lt; r </span><span class="cov8" title="1">{
+                        li[l], li[r] = li[r], li[l]
+                }</span> else<span class="cov8" title="1"> {
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">li[lo], li[r] = li[r], li[lo]
+        return r</span>
+}
+
+func quickSortIntSelectSort(li []int, lo, hi int) <span class="cov8" title="1">{
+        var min int
+        for ; lo &lt; hi; lo++ </span><span class="cov8" title="1">{
+                min = lo
+                for i := lo + 1; i &lt;= hi; i++ </span><span class="cov8" title="1">{
+                        if li[i] &lt; li[min] </span><span class="cov8" title="1">{
+                                min = i
+                        }</span>
+                }
+                <span class="cov8" title="1">if lo != min </span><span class="cov8" title="1">{
+                        li[lo], li[min] = li[min], li[lo]
+                }</span>
+        }
+}
+
+type quickSortStackInt struct {
+        items []int
+}
+
+func (s *quickSortStackInt) Len() int <span class="cov8" title="1">{
+        return len(s.items)
+}</span>
+
+func (s *quickSortStackInt) Push(x, y int) <span class="cov8" title="1">{
+        s.items = append(s.items, x, y)
+}</span>
+func (s *quickSortStackInt) Pop() (int, int, error) <span class="cov8" title="1">{
+        l := len(s.items)
+        //if l &lt; 2 {
+        //        return 0, 0, errors.New("没有元素可以取出")
+        //}
+        x, y := s.items[l-2], s.items[l-1]
+        s.items = s.items[:l-2]
+        return x, y, nil
+}</span>
+
+// 快速排序1 结束 &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+
+// 快速排序2：不要用栈，只加了选择排序的基础版快排（反转排序） &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+func QuickSortIntRev(li []int) <span class="cov0" title="0">{
+        quickSortIntRev(li, 0, len(li)-1)
+}</span>
+
+func quickSortIntRev(li []int, lo, hi int) <span class="cov0" title="0">{
+        if hi-lo &lt; 5 </span><span class="cov0" title="0">{
+                quickSortIntSelectSortRev(li, lo, hi)
+                return
+        }</span>
+        <span class="cov0" title="0">mid := quickSortIntPartitionRev(li, lo, hi)
+        quickSortIntRev(li, lo, mid-1)
+        quickSortIntRev(li, mid+1, hi)</span>
+}
+
+func quickSortIntPartitionRev(li []int, lo, hi int) (mid int) <span class="cov0" title="0">{
+        l, r := lo, hi
+        midValue := li[lo] // 比较处
+        for l &lt; r </span><span class="cov0" title="0">{
+                for l &lt;= hi </span><span class="cov0" title="0">{
+                        if li[l] &lt; midValue </span><span class="cov0" title="0">{ // 比较处
+                                break</span>
+                        }
+                        <span class="cov0" title="0">l++</span>
+                }
+                <span class="cov0" title="0">for r &gt;= lo </span><span class="cov0" title="0">{
+                        if li[r] &gt;= midValue </span><span class="cov0" title="0">{ // 比较处
+                                break</span>
+                        }
+                        <span class="cov0" title="0">r--</span>
+                }
+                <span class="cov0" title="0">if l &lt; r </span><span class="cov0" title="0">{
+                        li[l], li[r] = li[r], li[l]
+                }</span> else<span class="cov0" title="0"> {
+                        break</span>
+                }
+        }
+        <span class="cov0" title="0">li[lo], li[r] = li[r], li[lo]
+        return r</span>
+}
+
+func quickSortIntSelectSortRev(li []int, lo, hi int) <span class="cov0" title="0">{
+        var min int
+        for ; lo &lt; hi; lo++ </span><span class="cov0" title="0">{
+                min = lo
+                for i := lo + 1; i &lt;= hi; i++ </span><span class="cov0" title="0">{
+                        if li[i] &gt; li[min] </span><span class="cov0" title="0">{ // 比较处
+                                min = i
+                        }</span>
+                }
+                <span class="cov0" title="0">if lo != min </span><span class="cov0" title="0">{
+                        li[lo], li[min] = li[min], li[lo]
+                }</span>
+        }
+}
+
+// 快速排序2 结束 &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package common
+
+import "fmt"
+
+type TreeNode struct {
+        Val   int
+        Left  *TreeNode
+        Right *TreeNode
+}
+
+var printCache [][]string
+
+func PrintTreeNodes(root *TreeNode) <span class="cov0" title="0">{
+        printCache = [][]string{}
+        printTreeNodes(root, 0)
+        for i := range printCache </span><span class="cov0" title="0">{
+                fmt.Println(printCache[i])
+        }</span>
+}
+
+func printTreeNodes(node *TreeNode, depth int) <span class="cov0" title="0">{
+        if len(printCache) &lt;= depth </span><span class="cov0" title="0">{
+                printCache = append(printCache, []string{})
+        }</span>
+        <span class="cov0" title="0">if node == nil </span><span class="cov0" title="0">{
+                printCache[depth] = append(printCache[depth], "null")
+                return
+        }</span>
+        <span class="cov0" title="0">printCache[depth] = append(printCache[depth], fmt.Sprint(node.Val))
+        printTreeNodes(node.Left, depth+1)
+        printTreeNodes(node.Right, depth+1)</span>
+}
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package p0
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+将两个有序链表合并为一个新的有序链表并返回。
+新链表是通过拼接给定的两个链表的所有节点组成的。
+
+示例：
+
+输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4
+输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/merge-two-sorted-lists
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode <span class="cov8" title="1">{
+        if l2 == nil </span><span class="cov8" title="1">{
+                return l1
+        }</span>
+        <span class="cov8" title="1">if l1 == nil </span><span class="cov0" title="0">{
+                return l2
+        }</span>
+        <span class="cov8" title="1">var head *ListNode = &amp;ListNode{}
+        var tail *ListNode = head
+        for </span><span class="cov8" title="1">{
+                if l1.Val &lt; l2.Val </span><span class="cov8" title="1">{
+                        tail.Next = l1
+                        tail = tail.Next
+                        l1 = l1.Next
+                        if l1 == nil </span><span class="cov8" title="1">{
+                                tail.Next = l2
+                                break</span>
+                        }
+                } else<span class="cov8" title="1"> {
+                        tail.Next = l2
+                        tail = tail.Next
+                        l2 = l2.Next
+                        if l2 == nil </span><span class="cov8" title="1">{
+                                tail.Next = l1
+                                break</span>
+                        }
+                }
+        }
+        <span class="cov8" title="1">return head.Next</span>
+}
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package p0
+
+import (
+        "fmt"
+        "github.com/Saodd/leetcode-algo/common"
+)
+
+/*
+实现获取下一个排列的函数，算法需要将给定数字序列
+重新排列成字典序中下一个更大的排列。
+
+如果不存在下一个更大的排列，
+则将数字重新排列成最小的排列（即升序排列）。
+
+必须原地修改，只允许使用额外常数空间。
+
+以下是一些例子，输入位于左侧列，其相应输出位于右侧列。
+1,2,3 → 1,3,2
+3,2,1 → 1,2,3
+1,1,5 → 1,5,1
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/next-permutation
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func NextPermutation(nums []int) <span class="cov8" title="1">{
+        fmt.Println()
+        if len(nums) &lt; 2 </span><span class="cov8" title="1">{
+                return
+        }</span>
+        <span class="cov8" title="1">var top int
+        for top = len(nums) - 1; top &gt; 0; top-- </span><span class="cov8" title="1">{
+                if nums[top-1] &lt; nums[top] </span><span class="cov8" title="1">{
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">if top == 0 </span><span class="cov8" title="1">{
+                swapSortInt(nums)
+                return
+        }</span>
+        <span class="cov8" title="1">exchId := indexOfMinGreater(nums[top:], nums[top-1]) + top
+        nums[top-1], nums[exchId] = nums[exchId], nums[top-1]
+        swapSortInt(nums[top:])
+        return</span>
+}
+
+// 二分查找
+func indexOfMinGreater(nums []int, target int) int <span class="cov8" title="1">{
+        var gt, lt int
+        for gt, lt = 0, len(nums); lt-gt &gt; 1; </span><span class="cov8" title="1">{
+                mid := (gt + lt) / 2
+                if nums[mid] &gt; target </span><span class="cov8" title="1">{
+                        gt = mid
+                }</span> else<span class="cov8" title="1"> {
+                        lt = mid
+                }</span>
+        }
+        <span class="cov8" title="1">return gt</span>
+}
+
+// 交换排序
+func swapSortInt(nums []int) <span class="cov8" title="1">{
+        for i, j := 0, len(nums)-1; i &lt; j; </span><span class="cov8" title="1">{
+                nums[i], nums[j] = nums[j], nums[i]
+                i++
+                j--
+        }</span>
+}
+
+func nextPermutation1(nums []int) <span class="cov0" title="0">{
+        if len(nums) &lt; 2 </span><span class="cov0" title="0">{
+                return
+        }</span>
+        <span class="cov0" title="0">var top int
+        // 找到顶点，即降序排列的头部
+        for top = len(nums) - 1; top &gt; 0; top-- </span><span class="cov0" title="0">{
+                if nums[top-1] &lt; nums[top] </span><span class="cov0" title="0">{
+                        break</span>
+                }
+        }
+        <span class="cov0" title="0">if top == 0 </span><span class="cov0" title="0">{
+                common.QuickSortInt(nums) // 快速排序函数
+                return
+        }</span>
+        // 在右边数组中找到一个值去跟左边交换
+        <span class="cov0" title="0">var targetNum, updateIndex = nums[top-1], top
+        for i := len(nums) - 1; i &gt; top; i-- </span><span class="cov0" title="0">{
+                if nums[i] &gt; targetNum &amp;&amp; nums[i] &lt; nums[updateIndex] </span><span class="cov0" title="0">{
+                        updateIndex = i
+                }</span>
+        }
+        <span class="cov0" title="0">nums[top-1], nums[updateIndex] = nums[updateIndex], nums[top-1]
+        common.QuickSortInt(nums[top:]) // 快速排序函数
+        return</span>
+}
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package p0
+
+/*
+假设按照升序排序的数组在预先未知的某个点上进行了旋转。
+
+( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。
+
+搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。
+
+你可以假设数组中不存在重复的元素。
+
+你的算法时间复杂度必须是 O(log n) 级别。
+
+示例 1:
+
+输入: nums = [4,5,6,7,0,1,2], target = 0
+输出: 4
+
+示例 2:
+
+输入: nums = [4,5,6,7,0,1,2], target = 3
+输出: -1
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/search-in-rotated-sorted-array
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func search(nums []int, target int) int <span class="cov8" title="1">{
+        switch len(nums) </span>{
+        case 0:<span class="cov0" title="0">
+                return -1</span>
+        case 1:<span class="cov0" title="0">
+                if target == nums[0] </span><span class="cov0" title="0">{
+                        return 0
+                }</span>
+                <span class="cov0" title="0">return -1</span>
+        }
+
+        <span class="cov8" title="1">var minId = indexOfMin(nums)
+        var maxId int
+        if minId == 0 </span><span class="cov8" title="1">{
+                maxId = len(nums) - 1
+        }</span> else<span class="cov8" title="1"> {
+                maxId = minId - 1
+        }</span>
+
+        //fmt.Println(maxId)
+        <span class="cov8" title="1">switch </span>{
+        case target &gt; nums[maxId] || target &lt; nums[minId]:<span class="cov8" title="1">
+                return -1</span>
+        case target &gt;= nums[0]:<span class="cov0" title="0">
+                return binarySearch(nums[:maxId+1], target)</span>
+        default:<span class="cov8" title="1">
+                if got := binarySearch(nums[minId:], target); got == -1 </span><span class="cov8" title="1">{
+                        return -1
+                }</span> else<span class="cov8" title="1"> {
+                        return got + minId
+                }</span>
+        }
+}
+
+func indexOfMin(nums []int) int <span class="cov8" title="1">{
+        // 假设1：nums长度大于1
+        // 假设2：nums没有重复元素
+        var firstElem = nums[0]
+        for left, right := 0, len(nums); ; </span><span class="cov8" title="1">{
+                mid := (left + right) / 2
+                if mid == left </span><span class="cov8" title="1">{
+                        if left == len(nums)-1 </span><span class="cov8" title="1">{
+                                return 0
+                        }</span>
+                        <span class="cov8" title="1">return left + 1</span>
+                }
+                <span class="cov8" title="1">if nums[mid] &gt; firstElem </span><span class="cov8" title="1">{
+                        left = mid
+                }</span> else<span class="cov8" title="1"> {
+                        right = mid
+                }</span>
+        }
+}
+
+func binarySearch(nums []int, target int) int <span class="cov8" title="1">{
+        // 假设1：nums已经升序排列
+        // 假设2：nums没有重复元素
+        if len(nums) == 0 || nums[0] &gt; target || nums[len(nums)-1] &lt; target </span><span class="cov8" title="1">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">for left, right := 0, len(nums); ; </span><span class="cov8" title="1">{
+                mid := (left + right) / 2
+                switch </span>{
+                case nums[mid] &lt; target:<span class="cov8" title="1">
+                        if left == mid </span><span class="cov8" title="1">{
+                                return -1
+                        }</span>
+                        <span class="cov8" title="1">left = mid</span>
+                case nums[mid] &gt; target:<span class="cov8" title="1">
+                        right = mid</span>
+                default:<span class="cov8" title="1">
+                        return mid</span>
+                }
+        }
+}
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package p0
+
+import "fmt"
+
+/*
+给定一个按照升序排列的整数数组 nums，和一个目标值 target。
+找出给定目标值在数组中的开始位置和结束位置。
+
+你的算法时间复杂度必须是 O(log n) 级别。
+
+如果数组中不存在目标值，返回 [-1, -1]。
+
+示例 1:
+
+输入: nums = [5,7,7,8,8,10], target = 8
+输出: [3,4]
+
+示例 2:
+
+输入: nums = [5,7,7,8,8,10], target = 6
+输出: [-1,-1]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func searchRange(nums []int, target int) []int <span class="cov8" title="1">{
+        result := []int{-1, -1}
+        if left := searchRangeLeft(nums, target); left != -1 </span><span class="cov8" title="1">{
+                result[0] = left
+                result[1] = searchRangeRight(nums[left:], target) + left
+        }</span>
+        <span class="cov8" title="1">return result</span>
+}
+
+func searchRangeLeft(nums []int, target int) int <span class="cov8" title="1">{
+        if len(nums) == 0 </span><span class="cov0" title="0">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">var lo, hi, mid int
+        for lo, hi = 0, len(nums); lo &lt; hi; </span><span class="cov8" title="1">{
+                mid = lo + (hi-lo)/2
+                if nums[mid] &lt; target </span><span class="cov8" title="1">{
+                        lo = mid + 1
+                }</span> else<span class="cov8" title="1"> {
+                        hi = mid
+                }</span>
+        }
+        <span class="cov8" title="1">if hi == len(nums) </span><span class="cov8" title="1">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">if nums[hi] == target </span><span class="cov8" title="1">{
+                return hi
+        }</span>
+        <span class="cov8" title="1">return -1</span>
+}
+
+func searchRangeRight(nums []int, target int) int <span class="cov8" title="1">{
+        if len(nums) == 0 </span><span class="cov0" title="0">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">var lo, hi, mid int
+        for lo, hi = 0, len(nums); lo &lt; hi; </span><span class="cov8" title="1">{
+                mid = lo + (hi-lo)/2
+                if nums[mid] &gt; target </span><span class="cov8" title="1">{
+                        hi = mid
+                }</span> else<span class="cov8" title="1"> {
+                        lo = mid + 1
+                }</span>
+        }
+
+        <span class="cov8" title="1">if hi == 0 </span><span class="cov8" title="1">{
+                return -1
+        }</span>
+        <span class="cov8" title="1">if nums[hi-1] == target </span><span class="cov8" title="1">{
+                return hi - 1
+        }</span>
+        <span class="cov8" title="1">return -1</span>
+}
+
+func searchRange1(nums []int, target int) []int <span class="cov0" title="0">{
+        if len(nums) == 0 </span><span class="cov0" title="0">{
+                return []int{-1, -1}
+        }</span>
+
+        <span class="cov0" title="0">var lo, hi int
+        for lo, hi = 0, len(nums)-1; lo &lt;= hi; </span><span class="cov0" title="0">{
+                mid := (lo + hi) / 2
+                switch </span>{
+                case nums[mid] &lt; target:<span class="cov0" title="0">
+                        lo = mid + 1</span>
+                case nums[mid] &gt; target:<span class="cov0" title="0">
+                        hi = mid - 1</span>
+                default:<span class="cov0" title="0">
+                        return []int{searchRangeLow(nums[lo:mid+1], target) + lo, searchRangeHigh(nums[mid:hi+1], target) + mid}</span>
+                }
+        }
+        <span class="cov0" title="0">return []int{-1, -1}</span>
+}
+
+func searchRangeLow(nums []int, target int) int <span class="cov0" title="0">{
+        fmt.Println(nums)
+        if len(nums) == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+
+        <span class="cov0" title="0">var lo, hi int
+        for lo, hi = 0, len(nums)-1; lo &lt; hi; </span><span class="cov0" title="0">{
+                mid := (lo + hi) / 2
+                if nums[mid] == target </span><span class="cov0" title="0">{
+                        hi = mid
+                }</span> else<span class="cov0" title="0"> {
+                        lo = mid + 1
+                }</span>
+        }
+
+        <span class="cov0" title="0">if nums[hi] == target </span><span class="cov0" title="0">{
+                return hi
+        }</span>
+        <span class="cov0" title="0">return -1</span>
+}
+
+func searchRangeHigh(nums []int, target int) int <span class="cov0" title="0">{
+        fmt.Println(nums)
+        if len(nums) == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+
+        <span class="cov0" title="0">var lo, hi int
+        for lo, hi = 0, len(nums); lo &lt; hi; </span><span class="cov0" title="0">{
+                mid := (lo + hi) / 2
+                if nums[mid] != target </span><span class="cov0" title="0">{
+                        hi = mid
+                }</span> else<span class="cov0" title="0"> {
+                        if lo == mid </span><span class="cov0" title="0">{
+                                break</span>
+                        }
+                        <span class="cov0" title="0">lo = mid</span>
+                }
+        }
+        <span class="cov0" title="0">if nums[lo] == target </span><span class="cov0" title="0">{
+                return lo
+        }</span>
+        <span class="cov0" title="0">return -1</span>
+}
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package p0
+
+/*
+给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。
+如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+
+你可以假设数组中无重复元素。
+
+示例 1:
+
+输入: [1,3,5,6], 5
+输出: 2
+
+示例 2:
+
+输入: [1,3,5,6], 2
+输出: 1
+
+示例 3:
+
+输入: [1,3,5,6], 7
+输出: 4
+
+示例 4:
+
+输入: [1,3,5,6], 0
+输出: 0
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/search-insert-position
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func searchInsert(nums []int, target int) int <span class="cov8" title="1">{
+        var lo, hi, mid int
+        for lo, hi = 0, len(nums)-1; lo &lt;= hi; </span><span class="cov8" title="1">{
+                mid = lo + (hi-lo)/2
+                switch </span>{
+                case nums[mid] &gt; target:<span class="cov8" title="1">
+                        hi = mid - 1</span>
+                case nums[mid] &lt; target:<span class="cov8" title="1">
+                        lo = mid + 1</span>
+                default:<span class="cov8" title="1">
+                        return mid</span>
+                }
+        }
+        <span class="cov8" title="1">return lo</span>
+}
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package p0
+
+/*
+判断一个 9x9 的数独是否有效。只需要根据以下规则，验证已经填入的数字是否有效即可。
+
+数字 1-9 在每一行只能出现一次。
+数字 1-9 在每一列只能出现一次。
+数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+数独部分空格内已填入了数字，空白格用 '.' 表示。
+
+示例 1:
+
+输入:
+[
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+输出: true
+
+示例 2:
+
+输入:
+[
+  ["8","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+输出: false
+解释: 除了第一行的第一个数字从 5 改为 8 以外，空格内其他数字均与 示例1 相同。
+     但由于位于左上角的 3x3 宫内有两个 8 存在, 因此这个数独是无效的。
+
+说明:
+
+一个有效的数独（部分已被填充）不一定是可解的。
+只需要根据以上规则，验证已经填入的数字是否有效即可。
+给定数独序列只包含数字 1-9 和字符 '.' 。
+给定数独永远是 9x9 形式的。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/valid-sudoku
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func isValidSudoku(board [][]byte) bool <span class="cov8" title="1">{
+        var checkRow, checkCol, checkBlk int
+        var ch byte
+        for i := 0; i &lt; 9; i++ </span><span class="cov8" title="1">{
+                checkRow, checkCol, checkBlk = 0, 0, 0
+
+                for j := 0; j &lt; 9; j++ </span><span class="cov8" title="1">{
+                        // 检查第i行
+                        ch = board[i][j]
+                        if ch != '.' </span><span class="cov8" title="1">{
+                                if checkRow&amp;(1&lt;&lt;(ch-'0')) != 0 </span><span class="cov8" title="1">{
+                                        return false
+                                }</span>
+                                <span class="cov8" title="1">checkRow |= 1 &lt;&lt; (ch - 48)</span>
+                        }
+
+                        // 检查第i列
+                        <span class="cov8" title="1">ch = board[j][i]
+                        if ch != '.' </span><span class="cov8" title="1">{
+                                if checkCol&amp;(1&lt;&lt;(ch-'0')) != 0 </span><span class="cov8" title="1">{
+                                        return false
+                                }</span>
+                                <span class="cov8" title="1">checkCol |= 1 &lt;&lt; (ch - 48)</span>
+                        }
+
+                        // 第i块 坐标偏移量(i%3)*3, (i/3)*3
+                        // 块内第j格  坐标偏移量j%3, j/3
+                        <span class="cov8" title="1">ch = board[(i%3)*3+j%3][(i/3)*3+j/3]
+                        if ch != '.' </span><span class="cov8" title="1">{
+                                if checkBlk&amp;(1&lt;&lt;(ch-'0')) != 0 </span><span class="cov8" title="1">{
+                                        return false
+                                }</span>
+                                <span class="cov8" title="1">checkBlk |= 1 &lt;&lt; (ch - 48)</span>
+                        }
+                }
+        }
+        <span class="cov8" title="1">return true</span>
+}
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package p0
+
+import "sort"
+
+/*
+给定一个无重复元素的数组 candidates 和一个目标数 target ，
+找出 candidates 中所有可以使数字和为 target 的组合。
+
+candidates 中的数字可以无限制重复被选取。
+
+说明：
+
+所有数字（包括 target）都是正整数。
+解集不能包含重复的组合。
+
+示例 1:
+
+输入: candidates = [2,3,6,7], target = 7,
+所求解集为:
+[
+  [7],
+  [2,2,3]
+]
+
+示例 2:
+
+输入: candidates = [2,3,5], target = 8,
+所求解集为:
+[
+  [2,2,2,2],
+  [2,3,3],
+  [3,5]
+]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/combination-sum
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func combinationSum(candidates []int, target int) [][]int <span class="cov8" title="1">{
+        if len(candidates) == 0 </span><span class="cov0" title="0">{
+                return [][]int{}
+        }</span>
+        <span class="cov8" title="1">g0039.cd = candidates
+        g0039.len = len(g0039.cd)
+        sort.Ints(g0039.cd)
+        g0039.temp = make([]int, target/g0039.cd[0]+1)
+        g0039.result = [][]int{}
+
+        recurCombinationSum(0, 0, target)
+        return g0039.result</span>
+}
+
+var g0039 = struct {
+        cd     []int
+        len    int
+        temp   []int
+        result [][]int
+}{}
+
+func recurCombinationSum(cdPos, tempPos int, target int) <span class="cov8" title="1">{
+        for ; cdPos &lt; g0039.len; cdPos++ </span><span class="cov8" title="1">{
+                if g0039.cd[cdPos] &gt; target </span><span class="cov8" title="1">{
+                        return
+                }</span>
+                <span class="cov8" title="1">g0039.temp[tempPos] = g0039.cd[cdPos]
+                if g0039.cd[cdPos] == target </span><span class="cov8" title="1">{
+                        newSolution := make([]int, tempPos+1)
+                        copy(newSolution, g0039.temp)
+                        g0039.result = append(g0039.result, newSolution)
+                        return
+                }</span> else<span class="cov8" title="1"> {
+                        recurCombinationSum(cdPos, tempPos+1, target-g0039.cd[cdPos])
+                }</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package p0
+
+import "sort"
+
+/*
+给定一个数组 candidates 和一个目标数 target ，
+找出 candidates 中所有可以使数字和为 target 的组合。
+
+candidates 中的每个数字在每个组合中只能使用一次。
+
+说明：
+
+所有数字（包括目标数）都是正整数。
+解集不能包含重复的组合。
+
+示例 1:
+
+输入: candidates = [10,1,2,7,6,1,5], target = 8,
+所求解集为:
+[
+  [1, 7],
+  [1, 2, 5],
+  [2, 6],
+  [1, 1, 6]
+]
+
+示例 2:
+
+输入: candidates = [2,5,2,1,2], target = 5,
+所求解集为:
+[
+  [1,2,2],
+  [5]
+]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/combination-sum-ii
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func combinationSum2(candidates []int, target int) [][]int <span class="cov8" title="1">{
+        if len(candidates) == 0 </span><span class="cov0" title="0">{
+                return [][]int{}
+        }</span>
+        <span class="cov8" title="1">g0040.temp = make([]int, len(candidates))
+
+        // 对原数组计数
+        g0040.counter = map[int]int{}
+        for _, num := range candidates </span><span class="cov8" title="1">{
+                g0040.counter[num]++
+        }</span>
+
+        // 得到一个无重复元素的数组，并排序
+        <span class="cov8" title="1">count := 0
+        for key := range g0040.counter </span><span class="cov8" title="1">{
+                candidates[count] = key
+                count++
+        }</span>
+        <span class="cov8" title="1">g0040.len = count
+        g0040.cd = candidates[:count]
+        sort.Ints(g0040.cd)
+
+        // 初始化剩下的全局变量
+        g0040.result = [][]int{}
+
+        recurCombinationSum2(0, 0, target)
+        return g0040.result</span>
+}
+
+var g0040 = struct {
+        cd      []int
+        len     int
+        temp    []int
+        result  [][]int
+        counter map[int]int
+}{}
+
+func recurCombinationSum2(cdPos, tempPos int, target int) <span class="cov8" title="1">{
+        // 在无重复元素的数组上前进，跳过的值就是相当于是0个的
+        for ; cdPos &lt; g0040.len; cdPos++ </span><span class="cov8" title="1">{
+                num := g0040.cd[cdPos]
+                tg := target
+                // 根据个数，分别求1个，2个，3个……的情况，并递归
+                for dupl := 0; dupl &lt; g0040.counter[num]; dupl++ </span><span class="cov8" title="1">{
+                        g0040.temp[tempPos+dupl] = num
+                        tg -= num
+
+                        if tg == 0 </span><span class="cov8" title="1">{
+                                newSolution := make([]int, tempPos+dupl+1)
+                                copy(newSolution, g0040.temp)
+                                g0040.result = append(g0040.result, newSolution)
+                        }</span> else<span class="cov8" title="1"> if tg &gt; 0 </span><span class="cov8" title="1">{
+                                recurCombinationSum2(cdPos+1, tempPos+dupl+1, tg)
+                        }</span> else<span class="cov8" title="1"> {
+                                break</span>
+                        }
+                }
+        }
+}
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">package p0
+
+import (
+        "unsafe"
+)
+
+/*
+给定两个以字符串形式表示的非负整数 num1 和 num2，
+返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+
+示例 1:
+
+输入: num1 = "2", num2 = "3"
+输出: "6"
+
+示例 2:
+
+输入: num1 = "123", num2 = "456"
+输出: "56088"
+
+说明：
+
+num1 和 num2 的长度小于110。
+num1 和 num2 只包含数字 0-9。
+num1 和 num2 均不以零开头，除非是数字 0 本身。
+不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/multiply-strings
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func multiply(num1 string, num2 string) string <span class="cov8" title="1">{
+        if num1[0] == '0' || num2[0] == '0' </span><span class="cov8" title="1">{
+                return "0"
+        }</span>
+        // 初始化
+        <span class="cov8" title="1">var result = make([]int32, len(num1)+len(num2))
+        var n1 = make([]int32, len(num1))
+        var n2 = make([]int32, len(num2))
+        </span><span class="cov8" title="1">{
+
+                for i, le := 0, len(num1)-1; i &lt;= le; i++ </span><span class="cov8" title="1">{
+                        n1[le-i] = int32(num1[i] - '0')
+                }</span>
+                <span class="cov8" title="1">for i, le := 0, len(num2)-1; i &lt;= le; i++ </span><span class="cov8" title="1">{
+                        n2[le-i] = int32(num2[i] - '0')
+                }</span>
+        }
+        // 逐位计算
+        <span class="cov8" title="1">var incre int32 = 0
+        for i1, dig1 := range n1 </span><span class="cov8" title="1">{
+                for i2, dig2 := range n2 </span><span class="cov8" title="1">{
+                        incre += dig1*dig2 + result[i1+i2]
+                        result[i1+i2] = incre % 10
+                        incre /= 10
+                }</span>
+                <span class="cov8" title="1">result[i1+len(num2)] = incre
+                incre = 0</span>
+        }
+        // 返回结果
+        <span class="cov8" title="1">var resultS = make([]byte, len(num1)+len(num2))
+        for i, le := 0, len(result)-1; i &lt;= le; i++ </span><span class="cov8" title="1">{
+                resultS[le-i] = byte(result[i]) + '0'
+        }</span>
+        <span class="cov8" title="1">for i, b := range resultS </span><span class="cov8" title="1">{
+                if b != '0' </span><span class="cov8" title="1">{
+                        resultS = resultS[i:]
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">return *(*string)(unsafe.Pointer(&amp;resultS))</span>
+}
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">package p0
+
+import (
+        "sort"
+)
+
+/*
+46. 全排列
+
+给定一个没有重复数字的序列，返回其所有可能的全排列。
+
+示例:
+
+输入: [1,2,3]
+输出:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/permutations
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func permute(nums []int) [][]int <span class="cov8" title="1">{
+        if len(nums) == 0 </span><span class="cov0" title="0">{
+                return [][]int{}
+        }</span>
+
+        <span class="cov8" title="1">var le = len(nums)
+        var total = 1
+        for i := 2; i &lt;= le; i++ </span><span class="cov8" title="1">{
+                total *= i
+        }</span>
+        <span class="cov8" title="1">var result = make([][]int, total)
+        for i := 0; i &lt; total; i++ </span><span class="cov8" title="1">{
+                result[i] = make([]int, le)
+        }</span>
+
+        <span class="cov8" title="1">sort.Ints(nums)
+        copy(result[0], nums)
+        for i := 1; i &lt; total; i++ </span><span class="cov8" title="1">{
+                NextPermutation(nums)
+                copy(result[i], nums)
+        }</span>
+
+        <span class="cov8" title="1">return result</span>
+}
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package p0
+
+import "sort"
+
+/*
+47. 全排列 II
+
+给定一个可包含重复数字的序列，返回所有不重复的全排列。
+
+示例:
+
+输入: [1,1,2]
+输出:
+[
+  [1,1,2],
+  [1,2,1],
+  [2,1,1]
+]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/permutations-ii
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func permuteUnique(nums []int) [][]int <span class="cov8" title="1">{
+        if len(nums) == 0 </span><span class="cov8" title="1">{
+                return [][]int{}
+        }</span>
+
+        <span class="cov8" title="1">sort.Ints(nums)
+        g0047.len = len(nums)
+        g0047.nums = nums
+        g0047.temp = make([]int, len(nums))
+        g0047.used = make([]bool, len(nums))
+        g0047.result = make([][]int, 0, 6)
+
+        recurPermuteUnique(0)
+        return g0047.result</span>
+}
+
+var g0047 = struct {
+        nums   []int
+        temp   []int
+        len    int
+        result [][]int
+        used   []bool
+}{}
+
+func recurPermuteUnique(pos int) <span class="cov8" title="1">{
+        if pos == g0047.len </span><span class="cov8" title="1">{
+                newSolution := make([]int, len(g0047.temp))
+                copy(newSolution, g0047.temp)
+                g0047.result = append(g0047.result, newSolution)
+                return
+        }</span>
+        <span class="cov8" title="1">for i := 0; i &lt; g0047.len; i++ </span><span class="cov8" title="1">{
+                if !g0047.used[i] </span><span class="cov8" title="1">{
+                        if i &gt; 0 &amp;&amp; !g0047.used[i-1] &amp;&amp; g0047.nums[i] == g0047.nums[i-1] </span><span class="cov8" title="1">{
+                                continue</span>
+                        }
+                        <span class="cov8" title="1">g0047.temp[pos] = g0047.nums[i]
+                        g0047.used[i] = true
+                        recurPermuteUnique(pos + 1)
+                        g0047.used[i] = false</span>
+                }
+        }
+}
+
+// // ---------------------------------------
+//func permuteUnique(nums []int) [][]int {
+//    if len(nums)==0{
+//        return [][]int{}
+//    }
+//
+//    len = len(nums) - 1
+//    temp = nums
+//    sort.Ints(temp)
+//
+//    result = make([][]int, 0, 5)
+//
+//    recurPermuteUnique(0)
+//    return result
+//}
+//
+//var temp []int
+//var len int
+//var result [][]int
+//
+//func recurPermuteUnique(pos int) {
+//    if pos == len {
+//        newSolution := make([]int, len(temp))
+//        copy(newSolution, temp)
+//        result = append(result, newSolution)
+//        return
+//    }
+//
+//    recurPermuteUnique(pos + 1)
+//    for i := pos + 1; i &lt;= len; i++ {
+//        for j:=pos; j&lt;i; j++{
+//            if temp[j]==temp[i]{
+//                goto NEXTI
+//            }
+//        }
+//        temp[pos], temp[i] = temp[i], temp[pos]
+//        recurPermuteUnique(pos + 1)
+//        temp[pos], temp[i] = temp[i], temp[pos]
+//        NEXTI:
+//    }
+//}
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package p0
+
+/*
+48. 旋转图像
+
+给定一个 n × n 的二维矩阵表示一个图像。
+
+将图像顺时针旋转 90 度。
+
+说明：
+
+你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。
+
+示例 1:
+
+给定 matrix =
+[
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+],
+
+原地旋转输入矩阵，使其变为:
+[
+  [7,4,1],
+  [8,5,2],
+  [9,6,3]
+]
+
+示例 2:
+
+给定 matrix =
+[
+  [ 5, 1, 9,11],
+  [ 2, 4, 8,10],
+  [13, 3, 6, 7],
+  [15,14,12,16]
+],
+
+原地旋转输入矩阵，使其变为:
+[
+  [15,13, 2, 5],
+  [14, 3, 4, 1],
+  [12, 6, 8, 9],
+  [16, 7,10,11]
+]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/rotate-image
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func rotate(matrix [][]int) <span class="cov8" title="1">{
+        if len(matrix) &lt; 2 </span><span class="cov0" title="0">{
+                return
+        }</span>
+        <span class="cov8" title="1">var width = len(matrix[0])
+        var maxDepth = width / 2
+
+        for d := 0; d &lt; maxDepth; d++ </span><span class="cov8" title="1">{
+                w := width - 2*d - 1
+                for i := 0; i &lt; w; i++ </span><span class="cov8" title="1">{
+                        //左上 matrix[d][d+i]
+                        //右上 matrix[d+i][width-1-d]
+                        //右下 matrix[width-1-d][width-1-d-i]
+                        //左下 matrix[width-1-d-i][d]
+                        matrix[d][d+i], matrix[d+i][width-1-d], matrix[width-1-d][width-1-d-i], matrix[width-1-d-i][d] = matrix[width-1-d-i][d], matrix[d][d+i], matrix[d+i][width-1-d], matrix[width-1-d][width-1-d-i]
+                }</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package p0
+
+import (
+        "unsafe"
+)
+
+/*
+49. 字母异位词分组
+
+给定一个字符串数组，将字母异位词组合在一起。
+字母异位词指字母相同，但排列不同的字符串。
+
+示例:
+
+输入: ["eat", "tea", "tan", "ate", "nat", "bat"],
+输出:
+[
+  ["ate","eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]
+
+说明：
+
+所有输入均为小写字母。
+不考虑答案输出的顺序。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/group-anagrams
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func groupAnagrams(strs []string) [][]string <span class="cov0" title="0">{
+        var dictionary = map[string][]string{}
+
+        var temp string
+        for i := range strs </span><span class="cov0" title="0">{
+                temp = countAlpha(strs[i])
+                if value, ok := dictionary[temp]; ok </span><span class="cov0" title="0">{
+                        dictionary[temp] = append(value, strs[i])
+                }</span> else<span class="cov0" title="0"> {
+                        dictionary[temp] = []string{strs[i]}
+                }</span>
+        }
+
+        <span class="cov0" title="0">var result [][]string
+        for _, v := range dictionary </span><span class="cov0" title="0">{
+                result = append(result, v)
+        }</span>
+
+        <span class="cov0" title="0">return result</span>
+}
+
+var counter = make([]byte, 26)
+
+func countAlpha(s string) (count string) <span class="cov0" title="0">{
+        for i := 0; i &lt; 26; i++ </span><span class="cov0" title="0">{
+                counter[i] = 0
+        }</span>
+        <span class="cov0" title="0">for _, i := range s </span><span class="cov0" title="0">{
+                counter[i-'a']++
+        }</span>
+        <span class="cov0" title="0">return string(counter)</span>
+}
+
+// 方案1 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+func groupAnagrams1(strs []string) [][]string <span class="cov0" title="0">{
+        var dictionary = map[string][]string{}
+
+        var p []byte
+        var temp string
+        for i := range strs </span><span class="cov0" title="0">{
+                p = []byte(strs[i])
+                QuickSortByte(p)
+                temp = *(*string)(unsafe.Pointer(&amp;p))
+                if value, ok := dictionary[temp]; ok </span><span class="cov0" title="0">{
+                        dictionary[temp] = append(value, strs[i])
+                }</span> else<span class="cov0" title="0"> {
+                        dictionary[temp] = []string{strs[i]}
+                }</span>
+        }
+
+        <span class="cov0" title="0">var result [][]string
+        for _, v := range dictionary </span><span class="cov0" title="0">{
+                result = append(result, v)
+        }</span>
+
+        <span class="cov0" title="0">return result</span>
+}
+
+// 辅助 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+func QuickSortByte(li []byte) <span class="cov0" title="0">{
+        if len(li) == 0 </span><span class="cov0" title="0">{
+                return
+        }</span>
+        <span class="cov0" title="0">quickSortByte(li, 0, len(li)-1)</span>
+}
+
+func quickSortByte(li []byte, lo, hi int) <span class="cov0" title="0">{
+        stack := quickSortStack{}
+        stack.Push(lo, hi)
+        for stack.Len() &gt; 0 </span><span class="cov0" title="0">{
+                x, y, _ := stack.Pop()
+                mid := quickSortBytePartition(li, x, y)
+                if mid-x &gt; 15 </span><span class="cov0" title="0">{
+                        stack.Push(x, mid-1)
+                }</span> else<span class="cov0" title="0"> if mid-x &gt; 1 </span><span class="cov0" title="0">{
+                        quickSortByteSelectSort(li, x, mid-1)
+                }</span>
+                <span class="cov0" title="0">if y-mid &gt; 15 </span><span class="cov0" title="0">{
+                        stack.Push(mid+1, y)
+                }</span> else<span class="cov0" title="0"> if y-mid &gt; 1 </span><span class="cov0" title="0">{
+                        quickSortByteSelectSort(li, mid+1, y)
+                }</span>
+        }
+}
+
+func quickSortBytePartition(li []byte, lo, hi int) (mid int) <span class="cov0" title="0">{
+        l, r := lo, hi
+        //li[lo], li[(lo+hi)/2] = li[(lo+hi)/2], li[lo]
+        midValue := li[lo]
+        for l &lt; r </span><span class="cov0" title="0">{
+                for l &lt;= hi </span><span class="cov0" title="0">{ // 找大的
+                        if li[l] &gt; midValue </span><span class="cov0" title="0">{
+                                break</span>
+                        }
+                        <span class="cov0" title="0">l++</span>
+                }
+                <span class="cov0" title="0">for r &gt;= lo </span><span class="cov0" title="0">{
+                        if li[r] &lt;= midValue </span><span class="cov0" title="0">{
+                                break</span>
+                        }
+                        <span class="cov0" title="0">r--</span>
+                }
+                <span class="cov0" title="0">if l &lt; r </span><span class="cov0" title="0">{
+                        li[l], li[r] = li[r], li[l]
+                }</span> else<span class="cov0" title="0"> {
+                        break</span>
+                }
+        }
+        <span class="cov0" title="0">li[lo], li[r] = li[r], li[lo]
+        return r</span>
+}
+
+func quickSortByteSelectSort(li []byte, lo, hi int) <span class="cov0" title="0">{
+        var min int
+        for ; lo &lt; hi; lo++ </span><span class="cov0" title="0">{
+                min = lo
+                for i := lo + 1; i &lt;= hi; i++ </span><span class="cov0" title="0">{
+                        if li[i] &lt; li[min] </span><span class="cov0" title="0">{
+                                min = i
+                        }</span>
+                }
+                <span class="cov0" title="0">if lo != min </span><span class="cov0" title="0">{
+                        li[lo], li[min] = li[min], li[lo]
+                }</span>
+        }
+}
+
+type quickSortStack struct {
+        items []int
+}
+
+func (s *quickSortStack) Len() int <span class="cov0" title="0">{
+        return len(s.items)
+}</span>
+
+func (s *quickSortStack) Push(x, y int) <span class="cov0" title="0">{
+        s.items = append(s.items, x, y)
+}</span>
+func (s *quickSortStack) Pop() (int, int, error) <span class="cov0" title="0">{
+        l := len(s.items)
+        //if l &lt; 2 {
+        //        return 0, 0, errors.New("没有元素可以取出")
+        //}
+        x, y := s.items[l-2], s.items[l-1]
+        s.items = s.items[:l-2]
+        return x, y, nil
+}</span>
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">package p0
+
+/*
+50. Pow(x, n)
+
+实现 pow(x, n) ，即计算 x 的 n 次幂函数。
+
+示例 1:
+
+输入: 2.00000, 10
+输出: 1024.00000
+
+示例 2:
+
+输入: 2.10000, 3
+输出: 9.26100
+
+示例 3:
+
+输入: 2.00000, -2
+输出: 0.25000
+解释: 2-2 = 1/22 = 1/4 = 0.25
+
+说明:
+
+-100.0 &lt; x &lt; 100.0
+n 是 32 位有符号整数，其数值范围是 [−231, 231 − 1] 。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/powx-n
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func myPow(x float64, n int) float64 <span class="cov8" title="1">{
+        if n &lt; 0 </span><span class="cov8" title="1">{
+                if n == -1&lt;&lt;31 </span><span class="cov8" title="1">{
+                        return myPow(x, n+1) / x
+                }</span>
+                <span class="cov8" title="1">x = 1 / x
+                n *= -1</span>
+        }
+
+        <span class="cov8" title="1">var result float64 = 1
+        var currentProduct = x
+        for n &gt; 0 </span><span class="cov8" title="1">{
+                if n&amp;1 == 1 </span><span class="cov8" title="1">{
+                        result *= currentProduct
+                }</span>
+                <span class="cov8" title="1">currentProduct *= currentProduct
+                n = n &gt;&gt; 1</span>
+        }
+        <span class="cov8" title="1">return result</span>
+}
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">package p0
+
+/*
+51. N皇后
+
+n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
+
+给定一个整数 n，返回所有不同的 n 皇后问题的解决方案。
+
+每一种解法包含一个明确的 n 皇后问题的棋子放置方案，
+该方案中 'Q' 和 '.' 分别代表了皇后和空位。
+
+示例:
+
+输入: 4
+输出: [
+ [".Q..",  // 解法 1
+  "...Q",
+  "Q...",
+  "..Q."],
+
+ ["..Q.",  // 解法 2
+  "Q...",
+  "...Q",
+  ".Q.."]
+]
+
+解释: 4 皇后问题存在两个不同的解法。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/n-queens
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func solveNQueens(n int) [][]string <span class="cov8" title="1">{
+        // 初始化各项全局变量
+        g0051.len = n
+        g0051.temp = make([]int, n)
+        g0051.pattern = make([]byte, n)
+        for i := range g0051.temp </span><span class="cov8" title="1">{
+                g0051.temp[i] = i
+                g0051.pattern[i] = '.'
+        }</span>
+        <span class="cov8" title="1">g0051.result = [][]string{}
+        // 开始递归
+        recSolveNQueens(0)
+
+        return g0051.result</span>
+}
+
+var g0051 = struct {
+        len     int        // 皇后的数量
+        temp    []int      // 当前棋盘的摆放情况
+        result  [][]string // 最后返回的结果
+        pattern []byte     // 帮助生成字符串
+}{}
+
+func recSolveNQueens(n int) <span class="cov8" title="1">{
+        var num int
+        // 递归到最后一位，如果满足斜线条件就记录这个答案
+        if n == g0051.len-1 </span><span class="cov8" title="1">{
+                num = g0051.temp[n]
+                for j := 0; j &lt; n; j++ </span><span class="cov8" title="1">{
+                        if g0051.temp[j]+n-j == num || g0051.temp[j]-n+j == num </span><span class="cov8" title="1">{
+                                return
+                        }</span>
+                }
+                <span class="cov8" title="1">recordNQueens()
+                return</span>
+        }
+        // 不是最后一位，就回溯+递归
+        <span class="cov8" title="1">for i := n; i &lt; g0051.len; i++ </span><span class="cov8" title="1">{
+                if i == n </span><span class="cov8" title="1">{
+                        num = g0051.temp[n]
+                        for j := 0; j &lt; n; j++ </span><span class="cov8" title="1">{
+                                if g0051.temp[j]+n-j == num || g0051.temp[j]-n+j == num </span><span class="cov8" title="1">{
+                                        goto NEXTNUM</span>
+                                }
+                        }
+                        <span class="cov8" title="1">recSolveNQueens(n + 1)</span>
+                } else<span class="cov8" title="1"> {
+                        g0051.temp[n], g0051.temp[i] = g0051.temp[i], g0051.temp[n]
+                        num = g0051.temp[n]
+                        for j := 0; j &lt; n; j++ </span><span class="cov8" title="1">{
+                                if g0051.temp[j]+n-j == num || g0051.temp[j]-n+j == num </span><span class="cov8" title="1">{
+                                        g0051.temp[n], g0051.temp[i] = g0051.temp[i], g0051.temp[n]
+                                        goto NEXTNUM</span>
+                                }
+                        }
+                        <span class="cov8" title="1">recSolveNQueens(n + 1)
+                        g0051.temp[n], g0051.temp[i] = g0051.temp[i], g0051.temp[n]</span>
+                }
+        NEXTNUM:
+        }
+}
+
+func recordNQueens() <span class="cov8" title="1">{
+        // 记录当前的答案
+        solution := make([]string, g0051.len)
+        for i, n := range g0051.temp </span><span class="cov8" title="1">{
+                g0051.pattern[i] = 'Q'
+                solution[n] = string(g0051.pattern)
+                g0051.pattern[i] = '.'
+        }</span>
+        <span class="cov8" title="1">g0051.result = append(g0051.result, solution)</span>
+}
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package p0
+
+/*
+53. 最大子序和
+
+给定一个整数数组 nums ，找到一个具有最大和的连续子数组
+（子数组最少包含一个元素），返回其最大和。
+
+示例:
+
+输入: [-2,1,-3,4,-1,2,1,-5,4],
+输出: 6
+解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
+
+进阶:
+
+如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/maximum-subarray
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func maxSubArray(nums []int) int <span class="cov8" title="1">{
+        if len(nums) == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">var sumMax = nums[0]
+        var group int
+        for i := range nums </span><span class="cov8" title="1">{
+                group += nums[i]
+                if group &gt; sumMax </span><span class="cov8" title="1">{
+                        sumMax = group
+                }</span>
+                <span class="cov8" title="1">if group &lt; 0 </span><span class="cov8" title="1">{
+                        group = 0
+                }</span>
+        }
+        <span class="cov8" title="1">return sumMax</span>
+}
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package p0
+
+/*
+54. 螺旋矩阵
+
+给定一个包含 m x n 个元素的矩阵（m 行, n 列），请按照顺时针螺旋顺序，返回矩阵中的所有元素。
+
+示例 1:
+
+输入:
+[
+ [ 1, 2, 3 ],
+ [ 4, 5, 6 ],
+ [ 7, 8, 9 ]
+]
+输出: [1,2,3,6,9,8,7,4,5]
+
+示例 2:
+
+输入:
+[
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9,10,11,12]
+]
+输出: [1,2,3,4,8,12,11,10,9,5,6,7]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/spiral-matrix
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func spiralOrder(matrix [][]int) []int <span class="cov8" title="1">{
+        if len(matrix) == 0 || len(matrix[0]) == 0 </span><span class="cov0" title="0">{
+                return []int{}
+        }</span>
+        <span class="cov8" title="1">var result = make([]int, len(matrix[0])*len(matrix))
+
+        // 四个边界
+        var right, down, left, up = len(matrix[0]) - 1, len(matrix) - 1, 0, 1
+        // 当前指针的位置x,y
+        var x, y = 0, 0
+        // 循环填满结果数组
+        for direct, p := 0, 0; p &lt; len(result); p++ </span><span class="cov8" title="1">{
+                result[p] = matrix[y][x]
+
+                // 决定这次的前进方向
+                switch direct </span>{
+                case 0:<span class="cov8" title="1"> // 向右碰到边界
+                        if x == right </span><span class="cov8" title="1">{
+                                direct = 1
+                                right--
+                        }</span>
+                case 1:<span class="cov8" title="1"> // 向下碰到边界
+                        if y == down </span><span class="cov8" title="1">{
+                                direct = 2
+                                down--
+                        }</span>
+                case 2:<span class="cov8" title="1"> // 向左碰到边界
+                        if x == left </span><span class="cov8" title="1">{
+                                direct = 3
+                                left++
+                        }</span>
+                case 3:<span class="cov8" title="1"> // 向上碰到边界
+                        if y == up </span><span class="cov8" title="1">{
+                                direct = 0
+                                up++
+                        }</span>
+                }
+                // 前进一步
+                <span class="cov8" title="1">switch direct </span>{
+                case 0:<span class="cov8" title="1">
+                        x++</span>
+                case 1:<span class="cov8" title="1">
+                        y++</span>
+                case 2:<span class="cov8" title="1">
+                        x--</span>
+                case 3:<span class="cov8" title="1">
+                        y--</span>
+                }
+        }
+        <span class="cov8" title="1">return result</span>
+}
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">package p0
+
+/*
+55. 跳跃游戏
+
+给定一个非负整数数组，你最初位于数组的第一个位置。
+
+数组中的每个元素代表你在该位置可以跳跃的最大长度。
+
+判断你是否能够到达最后一个位置。
+
+示例 1:
+
+输入: [2,3,1,1,4]
+输出: true
+解释: 从位置 0 到 1 跳 1 步, 然后跳 3 步到达最后一个位置。
+
+示例 2:
+
+输入: [3,2,1,0,4]
+输出: false
+解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ，
+所以你永远不可能到达最后一个位置。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/jump-game
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func canJump(nums []int) bool <span class="cov8" title="1">{
+        if len(nums) &lt; 2 </span><span class="cov0" title="0">{
+                return true
+        }</span>
+        <span class="cov8" title="1">var endPoint = len(nums)
+        var touchPoint = nums[0]
+        for pos := 0; pos &lt; touchPoint; pos++ </span><span class="cov8" title="1">{
+                // 当前点能够触及的最远点
+                newPoint := nums[pos] + pos + 1
+                // 如果是比记录中更远的点，那就记录下来
+                if newPoint &gt; touchPoint </span><span class="cov8" title="1">{
+                        // 如果达到终点，就返回
+                        if newPoint &gt;= endPoint </span><span class="cov8" title="1">{
+                                return true
+                        }</span>
+                        <span class="cov8" title="1">touchPoint = newPoint</span>
+                }
+        }
+        <span class="cov8" title="1">return false</span>
+}
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">package p0
+
+/*
+56. 合并区间
+
+给出一个区间的集合，请合并所有重叠的区间。
+
+示例 1:
+
+输入: [[1,3],[2,6],[8,10],[15,18]]
+输出: [[1,6],[8,10],[15,18]]
+解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
+
+示例 2:
+
+输入: [[1,4],[4,5]]
+输出: [[1,5]]
+解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/merge-intervals
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func merge(intervals [][]int) [][]int <span class="cov8" title="1">{
+        if len(intervals) &lt; 2 </span><span class="cov0" title="0">{
+                return intervals
+        }</span>
+        <span class="cov8" title="1">QuickSortInterval(intervals)
+
+        var merges = make([][]int, 0)
+        var merge = []int{intervals[0][0], intervals[0][1]}
+        for i := range intervals </span><span class="cov8" title="1">{
+                left, right := intervals[i][0], intervals[i][1]
+                if left &lt;= merge[1] </span><span class="cov8" title="1">{
+                        if right &gt; merge[1] </span><span class="cov8" title="1">{
+                                merge[1] = right
+                        }</span>
+                } else<span class="cov8" title="1"> {
+                        merges = append(merges, merge)
+                        merge = []int{left, right}
+                }</span>
+        }
+        <span class="cov8" title="1">merges = append(merges, merge)
+        return merges</span>
+}
+
+// 快速排序 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+func QuickSortInterval(li [][]int) <span class="cov8" title="1">{
+        if len(li) == 0 </span><span class="cov0" title="0">{
+                return
+        }</span>
+        <span class="cov8" title="1">quickSortInterval(li, 0, len(li)-1)</span>
+}
+
+func quickSortInterval(li [][]int, lo, hi int) <span class="cov8" title="1">{
+        stack := quickSortStackInterval{}
+        stack.Push(lo, hi)
+        for stack.Len() &gt; 0 </span><span class="cov8" title="1">{
+                x, y, _ := stack.Pop()
+                mid := quickSortIntervalPartition(li, x, y)
+                if mid-x &gt; 15 </span><span class="cov0" title="0">{
+                        stack.Push(x, mid-1)
+                }</span> else<span class="cov8" title="1"> if mid-x &gt; 1 </span><span class="cov0" title="0">{
+                        quickSortIntervalSelectSort(li, x, mid-1)
+                }</span>
+                <span class="cov8" title="1">if y-mid &gt; 15 </span><span class="cov0" title="0">{
+                        stack.Push(mid+1, y)
+                }</span> else<span class="cov8" title="1"> if y-mid &gt; 1 </span><span class="cov8" title="1">{
+                        quickSortIntervalSelectSort(li, mid+1, y)
+                }</span>
+        }
+}
+
+func quickSortIntervalPartition(li [][]int, lo, hi int) (mid int) <span class="cov8" title="1">{
+        l, r := lo, hi
+        //li[lo], li[(lo+hi)/2] = li[(lo+hi)/2], li[lo]
+        midValue := li[lo][0]
+        for l &lt; r </span><span class="cov8" title="1">{
+                for l &lt;= hi </span><span class="cov8" title="1">{ // 找大的
+                        if li[l][0] &gt; midValue </span><span class="cov8" title="1">{
+                                break</span>
+                        }
+                        <span class="cov8" title="1">l++</span>
+                }
+                <span class="cov8" title="1">for r &gt;= lo </span><span class="cov8" title="1">{
+                        if li[r][0] &lt;= midValue </span><span class="cov8" title="1">{
+                                break</span>
+                        }
+                        <span class="cov8" title="1">r--</span>
+                }
+                <span class="cov8" title="1">if l &lt; r </span><span class="cov0" title="0">{
+                        li[l], li[r] = li[r], li[l]
+                }</span> else<span class="cov8" title="1"> {
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">li[lo], li[r] = li[r], li[lo]
+        return r</span>
+}
+
+func quickSortIntervalSelectSort(li [][]int, lo, hi int) <span class="cov8" title="1">{
+        var min int
+        for ; lo &lt; hi; lo++ </span><span class="cov8" title="1">{
+                min = lo
+                for i := lo + 1; i &lt;= hi; i++ </span><span class="cov8" title="1">{
+                        if li[i][0] &lt; li[min][0] </span><span class="cov8" title="1">{
+                                min = i
+                        }</span>
+                }
+                <span class="cov8" title="1">if lo != min </span><span class="cov8" title="1">{
+                        li[lo], li[min] = li[min], li[lo]
+                }</span>
+        }
+}
+
+type quickSortStackInterval struct {
+        items []int
+}
+
+func (s *quickSortStackInterval) Len() int <span class="cov8" title="1">{
+        return len(s.items)
+}</span>
+
+func (s *quickSortStackInterval) Push(x, y int) <span class="cov8" title="1">{
+        s.items = append(s.items, x, y)
+}</span>
+func (s *quickSortStackInterval) Pop() (int, int, error) <span class="cov8" title="1">{
+        l := len(s.items)
+        //if l &lt; 2 {
+        //        return 0, 0, errors.New("没有元素可以取出")
+        //}
+        x, y := s.items[l-2], s.items[l-1]
+        s.items = s.items[:l-2]
+        return x, y, nil
+}</span>
+
+// 快速排序 结束 &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">package p0
+
+/*
+58. 最后一个单词的长度
+
+给定一个仅包含大小写字母和空格 ' ' 的字符串，返回其最后一个单词的长度。
+
+如果不存在最后一个单词，请返回 0 。
+
+说明：一个单词是指由字母组成，但不包含任何空格的字符串。
+
+示例:
+
+输入: "Hello World"
+输出: 5
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/length-of-last-word
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func lengthOfLastWord(s string) int <span class="cov8" title="1">{
+        var lastChar = len(s) - 1
+        for lastChar &gt;= 0 &amp;&amp; s[lastChar] == ' ' </span><span class="cov8" title="1">{
+                lastChar--
+        }</span>
+        <span class="cov8" title="1">if lastChar == -1 </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">var lastSp = lastChar - 1
+        for lastSp &gt;= 0 &amp;&amp; s[lastSp] != ' ' </span><span class="cov8" title="1">{
+                lastSp--
+        }</span>
+        <span class="cov8" title="1">return lastChar - lastSp</span>
+}
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">package p0
+
+import (
+        "github.com/Saodd/leetcode-algo/common"
+)
+
+/*
+60. 第k个排列
+
+给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列。
+
+按大小顺序列出所有排列情况，并一一标记，当 n = 3 时, 所有排列如下：
+
+"123"
+"132"
+"213"
+"231"
+"312"
+"321"
+给定 n 和 k，返回第 k 个排列。
+
+说明：
+
+给定 n 的范围是 [1, 9]。
+给定 k 的范围是[1,  n!]。
+
+示例 1:
+
+输入: n = 3, k = 3
+输出: "213"
+
+示例 2:
+
+输入: n = 4, k = 9
+输出: "2314"
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/permutation-sequence
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func getPermutation(n int, k int) string <span class="cov8" title="1">{
+        // 先把所有元素生成
+        var nums = make([]byte, n)
+        for i := byte(0); i &lt; byte(n); i++ </span><span class="cov8" title="1">{
+                nums[i] = i + '1'
+        }</span>
+        // 计算阶乘，为后面做准备
+        <span class="cov8" title="1">var fac = common.Factorial(n - 1)
+        // 因为n, k 都是从1开始计算，因此把他们都减掉1
+        n--
+        k--
+        // 逐位做除法，找出k落在哪一段
+        for i := 0; i &lt; n &amp;&amp; k != 0; i++ </span><span class="cov8" title="1">{
+                upInsertBytes(i, i+k/fac, nums)
+                k %= fac
+                fac /= (n - i)
+        }</span>
+        <span class="cov8" title="1">return string(nums)</span>
+}
+
+// upInsertBytes 把ori位置的元素前移到tar位置，中间的元素相应后移一位。
+func upInsertBytes(tar, ori int, bs []byte) <span class="cov8" title="1">{
+        temp := bs[ori]
+        for i := ori; i &gt; tar; i-- </span><span class="cov8" title="1">{
+                bs[i] = bs[i-1]
+        }</span>
+        <span class="cov8" title="1">bs[tar] = temp</span>
+}
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">package p0
+
+import "github.com/Saodd/leetcode-algo/common"
+
+/*
+61. 旋转链表
+
+给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
+
+示例 1:
+
+输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2
+输出: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
+解释:
+向右旋转 1 步: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL
+向右旋转 2 步: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
+示例 2:
+
+输入: 0-&gt;1-&gt;2-&gt;NULL, k = 4
+输出: 2-&gt;0-&gt;1-&gt;NULL
+解释:
+向右旋转 1 步: 2-&gt;0-&gt;1-&gt;NULL
+向右旋转 2 步: 1-&gt;2-&gt;0-&gt;NULL
+向右旋转 3 步: 0-&gt;1-&gt;2-&gt;NULL
+向右旋转 4 步: 2-&gt;0-&gt;1-&gt;NULL
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/rotate-list
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func rotateRight(head *common.ListNode, k int) *common.ListNode <span class="cov8" title="1">{
+        if head == nil || k == 0 </span><span class="cov0" title="0">{
+                return head
+        }</span>
+        <span class="cov8" title="1">var nodeCount int
+        var tailNode *common.ListNode = head
+        for nodeCount = 1; tailNode.Next != nil; nodeCount++ </span><span class="cov8" title="1">{
+                tailNode = tailNode.Next
+        }</span>
+
+        <span class="cov8" title="1">k = nodeCount - k%nodeCount
+        if k == nodeCount </span><span class="cov0" title="0">{
+                return head
+        }</span>
+        <span class="cov8" title="1">var cutNode = head
+        for nodeCount = 1; nodeCount &lt; k; nodeCount++ </span><span class="cov8" title="1">{
+                cutNode = cutNode.Next
+        }</span>
+
+        <span class="cov8" title="1">head, cutNode.Next, tailNode.Next = cutNode.Next, nil, head
+        return head</span>
+}
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">package p0
+
+import (
+        "github.com/Saodd/leetcode-algo/common"
+)
+
+/*
+62. 不同路径
+
+一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
+
+机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。
+
+问总共有多少条不同的路径？
+
+说明：m 和 n 的值均不超过 100。
+
+示例 1:
+
+输入: m = 3, n = 2
+输出: 3
+解释:
+从左上角开始，总共有 3 条路径可以到达右下角。
+1. 向右 -&gt; 向右 -&gt; 向下
+2. 向右 -&gt; 向下 -&gt; 向右
+3. 向下 -&gt; 向右 -&gt; 向右
+
+示例 2:
+
+输入: m = 7, n = 3
+输出: 28
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/unique-paths
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func uniquePaths(m int, n int) int <span class="cov8" title="1">{
+        m--
+        n--
+        // 保证n更小
+        if n &gt; m </span><span class="cov0" title="0">{
+                n, m = m, n
+        }</span>
+        // 准备分子和分母
+        <span class="cov8" title="1">var numo, deno = make([]int, n), make([]int, n)
+        for i := 0; i &lt; n; i++ </span><span class="cov8" title="1">{
+                numo[i] = m + i + 1
+                deno[i] = i + 1
+        }</span>
+        // 分子分母对消。最后答案一定是整数，分母一定能全部被分子消除掉。
+        <span class="cov8" title="1">for _, d := range deno </span><span class="cov8" title="1">{
+                // 把分子的元素集中一下，减少循环次数
+                for numo[0] &lt; 1&lt;&lt;25 &amp;&amp; len(numo) &gt; 1 </span><span class="cov8" title="1">{
+                        numo[0] = numo[0] * numo[1]
+                        numo[1], numo[len(numo)-1] = numo[len(numo)-1], numo[1]
+                        numo = numo[:len(numo)-1]
+                }</span>
+                <span class="cov8" title="1">for i := range numo </span><span class="cov8" title="1">{
+                        // 分母元素能被分子整除就最好了，不能整除就去掉最大公约数
+                        if numo[i]%d == 0 </span><span class="cov8" title="1">{
+                                numo[i] /= d
+                                break</span>
+                        } else<span class="cov8" title="1"> {
+                                g := common.Gcd(numo[i], d)
+                                numo[i] /= g
+                                d /= g
+                        }</span>
+                }
+        }
+        // 把分子剩下的元素乘起来
+        <span class="cov8" title="1">var paths int = 1
+        for _, n := range numo </span><span class="cov8" title="1">{
+                paths *= n
+        }</span>
+        <span class="cov8" title="1">return paths</span>
+}
+
+// 另一种实现：对象式 ------------------------
+func uniquePaths2(m int, n int) int <span class="cov0" title="0">{
+        b := newUniquePathsBoard(m, n)
+        return b.Paths(m-1, n-1)
+}</span>
+
+type uniquePathsBoard [][]int
+
+func newUniquePathsBoard(m, n int) uniquePathsBoard <span class="cov0" title="0">{
+        var cache = make([][]int, m)
+        for i := 0; i &lt; m; i++ </span><span class="cov0" title="0">{
+                cache[i] = make([]int, n)
+        }</span>
+        <span class="cov0" title="0">return cache</span>
+}
+
+func (b uniquePathsBoard) Paths(m, n int) int <span class="cov0" title="0">{
+        if m == 0 || n == 0 </span><span class="cov0" title="0">{
+                return 1
+        }</span>
+        <span class="cov0" title="0">if b[m][n] == 0 </span><span class="cov0" title="0">{
+                b[m][n] = b.Paths(m-1, n) + b.Paths(m, n-1)
+        }</span>
+        <span class="cov0" title="0">return b[m][n]</span>
+}
+
+// 另一种实现：函数式 ------------------------
+func uniquePaths1(m int, n int) int <span class="cov0" title="0">{
+        // 创建一个二维数组
+        var cache = make([][]int, m)
+        for i := 0; i &lt; m; i++ </span><span class="cov0" title="0">{
+                cache[i] = make([]int, n)
+        }</span>
+        // 递归求解
+        <span class="cov0" title="0">return uniquePathsRec(m-1, n-1, cache)</span>
+}
+
+func uniquePathsRec(m, n int, cache [][]int) int <span class="cov0" title="0">{
+        // 递归终止条件
+        if m == 0 || n == 0 </span><span class="cov0" title="0">{
+                return 1
+        }</span>
+        // 查看之前是否计算过
+        <span class="cov0" title="0">if cache[m][n] == 0 </span><span class="cov0" title="0">{
+                cache[m][n] = uniquePathsRec(m-1, n, cache) + uniquePathsRec(m, n-1, cache)
+        }</span>
+        <span class="cov0" title="0">return cache[m][n]</span>
+}
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package p0
+
+/*
+63. 不同路径 II
+
+一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
+
+机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。
+
+现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
+
+网格中的障碍物和空位置分别用 1 和 0 来表示。
+
+说明：m 和 n 的值均不超过 100。
+
+示例 1:
+
+输入:
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+输出: 2
+解释:
+3x3 网格的正中间有一个障碍物。
+从左上角到右下角一共有 2 条不同的路径：
+1. 向右 -&gt; 向右 -&gt; 向下 -&gt; 向下
+2. 向下 -&gt; 向下 -&gt; 向右 -&gt; 向右
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/unique-paths-ii
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func uniquePathsWithObstacles(obstacleGrid [][]int) int <span class="cov8" title="1">{
+        if len(obstacleGrid) == 0 || len(obstacleGrid[0]) == 0 </span><span class="cov0" title="0">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">b := newUniquePathsWithObstaclesBoard(obstacleGrid)
+        return b.Paths(len(obstacleGrid)-1, len(obstacleGrid[0])-1)</span>
+}
+
+type uniquePathsWithObstaclesBoard struct {
+        paths    [][]int
+        obstacle [][]int
+}
+
+func newUniquePathsWithObstaclesBoard(ob [][]int) uniquePathsWithObstaclesBoard <span class="cov8" title="1">{
+        m, n := len(ob), len(ob[0])
+        var paths = make([][]int, m)
+        for i := 0; i &lt; m; i++ </span><span class="cov8" title="1">{
+                temp := make([]int, n)
+                for ii := 0; ii &lt; n; ii++ </span><span class="cov8" title="1">{
+                        temp[ii] = -1
+                }</span>
+                <span class="cov8" title="1">paths[i] = temp</span>
+        }
+        <span class="cov8" title="1">return uniquePathsWithObstaclesBoard{paths, ob}</span>
+}
+
+func (b uniquePathsWithObstaclesBoard) Paths(m, n int) int <span class="cov8" title="1">{
+        if b.obstacle[m][n] == 1 </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">if m == 0 &amp;&amp; n == 0 </span><span class="cov8" title="1">{
+                return 1
+        }</span>
+        <span class="cov8" title="1">if b.paths[m][n] == -1 </span><span class="cov8" title="1">{
+                temp := 0
+                if m &gt; 0 </span><span class="cov8" title="1">{
+                        temp += b.Paths(m-1, n)
+                }</span>
+                <span class="cov8" title="1">if n &gt; 0 </span><span class="cov8" title="1">{
+                        temp += b.Paths(m, n-1)
+                }</span>
+                <span class="cov8" title="1">b.paths[m][n] = temp</span>
+        }
+        <span class="cov8" title="1">return b.paths[m][n]</span>
+}
+</pre>
+		
+		<pre class="file" id="file29" style="display: none">package p0
+
+import "github.com/Saodd/leetcode-algo/common"
+
+/*
+64. 最小路径和
+
+给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
+
+说明：每次只能向下或者向右移动一步。
+
+示例:
+
+输入:
+[
+  [1,3,1],
+  [1,5,1],
+  [4,2,1]
+]
+输出: 7
+解释: 因为路径 1→3→1→1→1 的总和最小。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/minimum-path-sum
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func minPathSum(grid [][]int) int <span class="cov8" title="1">{
+        m, n := len(grid), len(grid[0])
+        for x := 0; x &lt; m; x++ </span><span class="cov8" title="1">{
+                for y := 0; y &lt; n; y++ </span><span class="cov8" title="1">{
+                        grid[x][y] += minPathSumValue(x, y, grid)
+                }</span>
+        }
+        <span class="cov8" title="1">return grid[m-1][n-1]</span>
+}
+
+func minPathSumValue(x, y int, grid [][]int) int <span class="cov8" title="1">{
+        if x == 0 &amp;&amp; y == 0 </span><span class="cov8" title="1">{
+                return 0
+        }</span>
+        <span class="cov8" title="1">if x == 0 </span><span class="cov8" title="1">{
+                return grid[0][y-1]
+        }</span>
+        <span class="cov8" title="1">if y == 0 </span><span class="cov8" title="1">{
+                return grid[x-1][0]
+        }</span>
+        <span class="cov8" title="1">return common.MinInt(grid[x-1][y], grid[x][y-1])</span>
+}
+
+// 第二次提交：在第一次的基础上稍作优化 ----------------------------------------
+func minPathSum2(grid [][]int) int <span class="cov0" title="0">{
+        maxX, maxY := len(grid), len(grid[0])
+        </span><span class="cov0" title="0">{
+                for i := 1; i &lt; maxY; i++ </span><span class="cov0" title="0">{
+                        grid[0][i] += grid[0][i-1]
+                }</span>
+                <span class="cov0" title="0">for i := 1; i &lt; maxX; i++ </span><span class="cov0" title="0">{
+                        grid[i][0] += grid[i-1][0]
+                }</span>
+        }
+        <span class="cov0" title="0">var minLevel int = maxX
+        if maxX &gt; maxY </span><span class="cov0" title="0">{
+                minLevel = maxY
+        }</span>
+        <span class="cov0" title="0">for level := 1; level &lt; minLevel; level++ </span><span class="cov0" title="0">{
+                for i := level; i &lt; maxY; i++ </span><span class="cov0" title="0">{
+                        if grid[level][i-1] &gt; grid[level-1][i] </span><span class="cov0" title="0">{
+                                grid[level][i] += grid[level-1][i]
+                        }</span> else<span class="cov0" title="0"> {
+                                grid[level][i] += grid[level][i-1]
+                        }</span>
+                }
+                <span class="cov0" title="0">for i := level + 1; i &lt; maxX; i++ </span><span class="cov0" title="0">{
+                        if grid[i][level-1] &gt; grid[i-1][level] </span><span class="cov0" title="0">{
+                                grid[i][level] += grid[i-1][level]
+                        }</span> else<span class="cov0" title="0"> {
+                                grid[i][level] += grid[i][level-1]
+                        }</span>
+                }
+        }
+        <span class="cov0" title="0">return grid[maxX-1][maxY-1]</span>
+        /*
+           执行用时 :8 ms, 在所有 golang 提交中击败了91.42%的用户
+           内存消耗 :3.9 MB, 在所有 golang 提交中击败了92.42%的用户
+        */
+}
+
+// 第一次提交：建立一个空的二维数组，分别对行、列计算最小路径 --------------------------------------
+func minPathSum1(grid [][]int) int <span class="cov0" title="0">{
+        maxX, maxY := len(grid), len(grid[0])
+        paths := make([][]int, maxX)
+        for i := 0; i &lt; maxX; i++ </span><span class="cov0" title="0">{
+                paths[i] = make([]int, maxY)
+        }</span>
+        <span class="cov0" title="0">paths[0][0] = grid[0][0]
+        x, y := 0, 0
+        for x &lt; maxX &amp;&amp; y &lt; maxY </span><span class="cov0" title="0">{
+                if x == 0 </span><span class="cov0" title="0">{
+                        for i := y + 1; i &lt; maxY; i++ </span><span class="cov0" title="0">{
+                                paths[x][i] = paths[x][i-1] + grid[x][i]
+                        }</span>
+                        <span class="cov0" title="0">for i := x + 1; i &lt; maxX; i++ </span><span class="cov0" title="0">{
+                                paths[i][y] = paths[i-1][y] + grid[i][y]
+                        }</span>
+                } else<span class="cov0" title="0"> {
+                        for i := y; i &lt; maxY; i++ </span><span class="cov0" title="0">{
+                                if paths[x][i-1] &gt; paths[x-1][i] </span><span class="cov0" title="0">{
+                                        paths[x][i] = paths[x-1][i] + grid[x][i]
+                                }</span> else<span class="cov0" title="0"> {
+                                        paths[x][i] = paths[x][i-1] + grid[x][i]
+                                }</span>
+                        }
+                        <span class="cov0" title="0">for i := x; i &lt; maxX; i++ </span><span class="cov0" title="0">{
+                                if paths[i][y-1] &gt; paths[i-1][y] </span><span class="cov0" title="0">{
+                                        paths[i][y] = paths[i-1][y] + grid[i][y]
+                                }</span> else<span class="cov0" title="0"> {
+                                        paths[i][y] = paths[i][y-1] + grid[i][y]
+                                }</span>
+                        }
+                }
+                <span class="cov0" title="0">x++
+                y++</span>
+        }
+        <span class="cov0" title="0">return paths[maxX-1][maxY-1]</span>
+}
+</pre>
+		
+		<pre class="file" id="file30" style="display: none">package p0
+
+/*
+66. 加一
+
+给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
+
+最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+
+你可以假设除了整数 0 之外，这个整数不会以零开头。
+
+示例 1:
+
+输入: [1,2,3]
+输出: [1,2,4]
+解释: 输入数组表示数字 123。
+示例 2:
+
+输入: [4,3,2,1]
+输出: [4,3,2,2]
+解释: 输入数组表示数字 4321。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/plus-one
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func plusOne(digits []int) []int <span class="cov8" title="1">{
+        // 先加一
+        var pos = len(digits) - 1
+        digits[pos] += 1
+        // 进位
+        for ; pos &gt; 0; pos-- </span><span class="cov8" title="1">{
+                if digits[pos] == 10 </span><span class="cov8" title="1">{
+                        digits[pos] = 0
+                        digits[pos-1] += 1
+                }</span>
+        }
+        // 最高位进位
+        <span class="cov8" title="1">if digits[0] == 10 </span><span class="cov8" title="1">{
+                temp := make([]int, len(digits)+1)
+                copy(temp[2:], digits[1:])
+                temp[1] = 0
+                temp[0] = 1
+                digits = temp
+        }</span>
+        <span class="cov8" title="1">return digits</span>
+}
+</pre>
+		
+		<pre class="file" id="file31" style="display: none">package p0
+
+/*
+给定两个二进制字符串，返回他们的和（用二进制表示）。
+
+输入为非空字符串且只包含数字 1 和 0。
+
+示例 1:
+
+输入: a = "11", b = "1"
+输出: "100"
+
+示例 2:
+
+输入: a = "1010", b = "1011"
+输出: "10101"
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/add-binary
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+提交成绩：
+执行用时 :0 ms, 在所有 Go 提交中击败了100.00%的用户
+内存消耗 :2.2 MB, 在所有 Go 提交中击败了82.95%的用户
+*/
+func addBinary(a string, b string) string <span class="cov8" title="1">{
+        // 令a的长度大于等于b
+        if len(a) &lt; len(b) </span><span class="cov0" title="0">{
+                return addBinary(b, a)
+        }</span>
+        // 准备变量
+        <span class="cov8" title="1">var temp []byte = make([]byte, len(a)+1)
+        copy(temp[1:], a)
+        ex := false
+        x, y := len(temp)-1, len(b)-1
+        // 把b加入temp中
+        for y &gt;= 0 </span><span class="cov8" title="1">{
+                if ex </span><span class="cov8" title="1">{
+                        temp[x] += (b[y] - '0' + 1)
+                }</span> else<span class="cov8" title="1"> {
+                        temp[x] += (b[y] - '0')
+                }</span>
+                <span class="cov8" title="1">if temp[x] &gt; '1' </span><span class="cov8" title="1">{
+                        temp[x] -= 2
+                        ex = true
+                }</span> else<span class="cov8" title="1"> {
+                        ex = false
+                }</span>
+                <span class="cov8" title="1">x--
+                y--</span>
+        }
+        // temp剩下的部分要继续处理进位
+        <span class="cov8" title="1">if ex </span><span class="cov8" title="1">{
+                for ; x &gt; 0; x-- </span><span class="cov8" title="1">{
+                        if temp[x] == '0' </span><span class="cov0" title="0">{
+                                temp[x] = '1'
+                                ex = false
+                                break</span>
+                        } else<span class="cov8" title="1"> {
+                                temp[x] = '0'
+                        }</span>
+                }
+        }
+        // 整理最后结果返回
+        <span class="cov8" title="1">if ex </span><span class="cov8" title="1">{
+                temp[0] = '1'
+                return string(temp)
+        }</span>
+        <span class="cov8" title="1">return string(temp[1:])</span>
+}
+</pre>
+		
+		<pre class="file" id="file32" style="display: none">package p0
+
+/*
+实现 int sqrt(int x) 函数。
+
+计算并返回 x 的平方根，其中 x 是非负整数。
+
+由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+
+示例 1:
+
+输入: 4
+输出: 2
+
+示例 2:
+
+输入: 8
+输出: 2
+说明: 8 的平方根是 2.82842...,
+     由于返回类型是整数，小数部分将被舍去。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/sqrtx
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func mySqrt(x int) int <span class="cov8" title="1">{
+        if x &lt; 2 </span><span class="cov0" title="0">{
+                return x
+        }</span>
+        <span class="cov8" title="1">var lo, hi int = 1, x
+        var prod int
+        for mid := (lo + hi) / 2; mid &gt; lo; mid = (lo + hi) / 2 </span><span class="cov8" title="1">{
+                prod = mid * mid
+                if prod &lt; x </span><span class="cov8" title="1">{
+                        lo = mid
+                }</span> else<span class="cov8" title="1"> if prod == x </span><span class="cov8" title="1">{
+                        return mid
+                }</span> else<span class="cov8" title="1"> {
+                        hi = mid
+                }</span>
+        }
+        <span class="cov8" title="1">return lo</span>
+        /*
+                提交成绩：
+                执行用时 :        4 ms        , 在所有 Go 提交中击败了        56.13%        的用户
+                内存消耗 :        2.2 MB        , 在所有 Go 提交中击败了        62.12%        的用户
+
+                其他思路：牛顿法
+        */
+}
+</pre>
+		
+		<pre class="file" id="file33" style="display: none">package p0
+
+/*
+70. 爬楼梯
+
+假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+
+每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+
+注意：给定 n 是一个正整数。
+
+示例 1：
+
+输入： 2
+输出： 2
+解释： 有两种方法可以爬到楼顶。
+1.  1 阶 + 1 阶
+2.  2 阶
+示例 2：
+
+输入： 3
+输出： 3
+解释： 有三种方法可以爬到楼顶。
+1.  1 阶 + 1 阶 + 1 阶
+2.  1 阶 + 2 阶
+3.  2 阶 + 1 阶
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/climbing-stairs
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func climbStairs(n int) int <span class="cov8" title="1">{
+        if n &lt;= 3 </span><span class="cov8" title="1">{
+                return n
+        }</span>
+        <span class="cov8" title="1">a, b := 2, 3
+        for i := 3; i &lt; n; i++ </span><span class="cov8" title="1">{
+                b, a = b+a, b
+        }</span>
+        <span class="cov8" title="1">return b</span>
+        /*
+                第三次：
+                执行用时 :        0 ms        , 在所有 Go 提交中击败了        100.00%        的用户
+                内存消耗 :        1.9 MB        , 在所有 Go 提交中击败了        87.35%        的用户
+
+                注：
+                题解中还给出了利用矩阵乘法的算法，复杂度是log(n)。
+                由于矩阵乘法是纯粹的数学（线性代数），已经不是编程算法思想了，所以暂时不考虑。（主要还是我忘记矩阵乘法怎么做了……）
+        */
+}
+
+func climbStairs2(n int) int <span class="cov0" title="0">{
+        if n &lt;= 3 </span><span class="cov0" title="0">{
+                return n
+        }</span>
+        <span class="cov0" title="0">dyn := make([]int, n)
+        dyn[0], dyn[1], dyn[2] = 1, 2, 3
+        for i := 3; i &lt; n; i++ </span><span class="cov0" title="0">{
+                dyn[i] = dyn[i-1] + dyn[i-2]
+        }</span>
+        <span class="cov0" title="0">return dyn[n-1]</span>
+        /*
+                第二次
+                执行用时 :        0 ms        , 在所有 Go 提交中击败了        100.00%        的用户
+                内存消耗 :        1.9 MB        , 在所有 Go 提交中击败了        42.24%        的用户
+        */
+}
+
+func climbStairs1(n int) int <span class="cov0" title="0">{
+        if n &lt;= 3 </span><span class="cov0" title="0">{
+                return n
+        }</span>
+        <span class="cov0" title="0">dyn := make([]int, n)
+        dyn[0], dyn[1], dyn[2] = 1, 2, 3
+        return climbStairs1Dyn(n-1, dyn)</span>
+        /*
+                第一次：
+                执行用时 :        0 ms        , 在所有 Go 提交中击败了        100.00%        的用户
+                内存消耗 :        2.1 MB        , 在所有 Go 提交中击败了        5.89%        的用户
+        */
+}
+
+func climbStairs1Dyn(n int, dyn []int) int <span class="cov0" title="0">{
+        t := dyn[n]
+        if t == 0 </span><span class="cov0" title="0">{
+                t = climbStairs1Dyn(n-1, dyn) + climbStairs1Dyn(n-2, dyn)
+                dyn[n] = t
+        }</span>
+        <span class="cov0" title="0">return t</span>
+}
+</pre>
+		
+		<pre class="file" id="file34" style="display: none">package p0
+
+import (
+        "strings"
+)
+
+/*
+71. 简化路径
+
+以 Unix 风格给出一个文件的绝对路径，你需要简化它。或者换句话说，将其转换为规范路径。
+
+在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；此外，两个点 （..） 表示将目录切换到上一级（指向父目录）；
+两者都可以是复杂相对路径的组成部分。更多信息请参阅：Linux / Unix中的绝对路径 vs 相对路径
+
+请注意，返回的规范路径必须始终以斜杠 / 开头，并且两个目录名之间必须只有一个斜杠 /。
+最后一个目录名（如果存在）不能以 / 结尾。此外，规范路径必须是表示绝对路径的最短字符串。
+
+示例 1：
+输入："/home/"
+输出："/home"
+解释：注意，最后一个目录名后面没有斜杠。
+
+示例 2：
+输入："/../"
+输出："/"
+解释：从根目录向上一级是不可行的，因为根是你可以到达的最高级。
+
+示例 3：
+输入："/home//foo/"
+输出："/home/foo"
+解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。
+
+示例 4：
+输入："/a/./b/../../c/"
+输出："/c"
+
+示例 5：
+输入："/a/../../b/../c//.//"
+输出："/c"
+
+示例 6：
+输入："/a//b////c/d//././/.."
+输出："/a/b/c"
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/simplify-path
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func simplifyPath(path string) string <span class="cov8" title="1">{
+        // 注：这里使用strings.Split严格来说是偷懒了。因为它（以及后面的strings.Join）会引入大量的字符串操作，性能相对较低。
+        // 正确解答参考标准库path.Clean()
+        var originWords = strings.Split(path, "/")
+        var words []string
+        for _, w := range originWords </span><span class="cov8" title="1">{
+                switch w </span>{
+                case "", ".":<span class="cov8" title="1"></span>
+                case "..":<span class="cov8" title="1">
+                        if len(words) &gt; 0 </span><span class="cov8" title="1">{
+                                words = words[:len(words)-1]
+                        }</span>
+                default:<span class="cov8" title="1">
+                        words = append(words, w)</span>
+                }
+        }
+        <span class="cov8" title="1">return "/" + strings.Join(words, "/")</span>
+}
+</pre>
+		
+		<pre class="file" id="file35" style="display: none">package p0
+
+/*
+73. 矩阵置零
+
+给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。
+
+示例 1:
+输入:
+[ [1,1,1],
+  [1,0,1],
+  [1,1,1]]
+输出:
+[ [1,0,1],
+  [0,0,0],
+  [1,0,1]]
+
+示例 2:
+输入:
+[ [0,1,2,0],
+  [3,4,5,2],
+  [1,3,1,5]]
+输出:
+[ [0,0,0,0],
+  [0,4,5,0],
+  [0,3,1,0]]
+
+进阶:
+
+一个直接的解决方案是使用  O(mn) 的额外空间，但这并不是一个好的解决方案。
+一个简单的改进方案是使用 O(m + n) 的额外空间，但这仍然不是最好的解决方案。
+你能想出一个常数空间的解决方案吗？
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/set-matrix-zeroes
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func setZeroes(matrix [][]int) <span class="cov8" title="1">{
+        /*
+                执行用时 :        16 ms        , 在所有 Go 提交中击败了        82.06%        的用户
+                内存消耗 :        6 MB        , 在所有 Go 提交中击败了        100.00%        的用户
+        */
+        if len(matrix) == 0 || len(matrix[0]) == 0 </span><span class="cov0" title="0">{
+                return
+        }</span>
+        <span class="cov8" title="1">var xl, yl = len(matrix[0]), len(matrix)
+
+        // 因为后面要用第一行和第一列做标记，所以提前判断一下
+        var xClear, yClear bool
+        for x := 0; x &lt; xl; x++ </span><span class="cov8" title="1">{
+                if matrix[0][x] == 0 </span><span class="cov8" title="1">{
+                        xClear = true
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">if xClear </span><span class="cov8" title="1">{
+                defer func() </span><span class="cov8" title="1">{
+                        for x := 0; x &lt; xl; x++ </span><span class="cov8" title="1">{
+                                matrix[0][x] = 0
+                        }</span>
+                }()
+        }
+        <span class="cov8" title="1">for y := 0; y &lt; yl; y++ </span><span class="cov8" title="1">{
+                if matrix[y][0] == 0 </span><span class="cov8" title="1">{
+                        yClear = true
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">if yClear </span><span class="cov8" title="1">{
+                defer func() </span><span class="cov8" title="1">{
+                        for y := 0; y &lt; yl; y++ </span><span class="cov8" title="1">{
+                                matrix[y][0] = 0
+                        }</span>
+                }()
+        }
+
+        // 在第一行和第一列打上标记
+        <span class="cov8" title="1">for y := 1; y &lt; yl; y++ </span><span class="cov8" title="1">{
+                for x := 1; x &lt; xl; x++ </span><span class="cov8" title="1">{
+                        if matrix[y][x] == 0 </span><span class="cov8" title="1">{
+                                matrix[y][0] = 0
+                                matrix[0][x] = 0
+                        }</span>
+                }
+        }
+
+        // 执行标记
+        <span class="cov8" title="1">for x := 1; x &lt; xl; x++ </span><span class="cov8" title="1">{
+                // 这里根据第一行的0标记来清除整列
+                if matrix[0][x] == 0 </span><span class="cov8" title="1">{
+                        for y := 1; y &lt; yl; y++ </span><span class="cov8" title="1">{
+                                matrix[y][x] = 0
+                        }</span>
+                }
+        }
+        <span class="cov8" title="1">for y := 1; y &lt; yl; y++ </span><span class="cov8" title="1">{
+                // 这里根据第一列的0标记来清除整行
+                if matrix[y][0] == 0 </span><span class="cov8" title="1">{
+                        for x := 1; x &lt; xl; x++ </span><span class="cov8" title="1">{
+                                matrix[y][x] = 0
+                        }</span>
+                }
+        }
+}
+</pre>
+		
+		<pre class="file" id="file36" style="display: none">package p0
+
+import "github.com/Saodd/leetcode-algo/common"
+
+/*
+74. 搜索二维矩阵
+
+编写一个高效的算法来判断 m x n 矩阵中，是否存在一个目标值。该矩阵具有如下特性：
+
+每行中的整数从左到右按升序排列。
+每行的第一个整数大于前一行的最后一个整数。
+
+示例 1:
+输入:
+matrix = [
+  [1,   3,  5,  7],
+  [10, 11, 16, 20],
+  [23, 30, 34, 50]
+]
+target = 3
+输出: true
+
+示例 2:
+输入:
+matrix = [
+  [1,   3,  5,  7],
+  [10, 11, 16, 20],
+  [23, 30, 34, 50]
+]
+target = 13
+输出: false
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/search-a-2d-matrix
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func searchMatrix2(matrix [][]int, target int) bool <span class="cov8" title="1">{
+        /*
+                大致思路 ： （官方题解思路）二维坐标转换为一维坐标。
+                执行用时 :        4 ms        , 在所有 Go 提交中击败了        98.17%        的用户
+                内存消耗 :        3.8 MB        , 在所有 Go 提交中击败了        100.00%        的用户
+        */
+        if len(matrix) == 0 || len(matrix[0]) == 0 </span><span class="cov8" title="1">{
+                return false
+        }</span>
+        <span class="cov8" title="1">var y, x = len(matrix), len(matrix[0])
+        var left, right = 0, x*y - 1
+        for right &gt;= left </span><span class="cov8" title="1">{
+                mid := (left + right) / 2
+                midValue := matrix[mid/x][mid%x]
+                if target &lt; midValue </span><span class="cov8" title="1">{
+                        right = mid - 1
+                }</span> else<span class="cov8" title="1"> if target &gt; midValue </span><span class="cov8" title="1">{
+                        left = mid + 1
+                }</span> else<span class="cov8" title="1"> {
+                        return true
+                }</span>
+        }
+        <span class="cov8" title="1">return false</span>
+}
+
+func searchMatrix(matrix [][]int, target int) bool <span class="cov8" title="1">{
+        /*
+                大致思路 ： 先在纵向做二分，然后到横向做二分。
+                执行用时 :        8 ms        , 在所有 Go 提交中击败了        79.58%        的用户
+                内存消耗 :        3.8 MB        , 在所有 Go 提交中击败了        100.00%        的用户
+        */
+        if len(matrix) == 0 || len(matrix[0]) == 0 </span><span class="cov8" title="1">{
+                return false
+        }</span>
+        <span class="cov8" title="1">var xm, ym = len(matrix[0]) - 1, len(matrix) - 1
+        if target &lt; matrix[0][0] || target &gt; matrix[ym][xm] </span><span class="cov8" title="1">{
+                return false
+        }</span>
+        // 先在纵向确定 target 在哪一行
+        <span class="cov8" title="1">var up, row, down = 0, ym / 2, ym
+        for </span><span class="cov8" title="1">{
+                if target &lt; matrix[row][0] </span><span class="cov8" title="1">{
+                        down = row
+                }</span> else<span class="cov8" title="1"> if target &gt; matrix[row][0] </span><span class="cov8" title="1">{
+                        if up == row </span><span class="cov8" title="1">{
+                                // 此时 down == up + 1, target 可能处在 down数组 上。
+                                // 无法像数组二分查找中那样直接+1，所以打个补丁额外判断一下。
+                                if target &gt;= matrix[down][0] </span><span class="cov8" title="1">{
+                                        row = down
+                                }</span>
+                                <span class="cov8" title="1">break</span>
+                        }
+                        <span class="cov8" title="1">up = row</span>
+                } else<span class="cov8" title="1"> {
+                        return true
+                }</span>
+                <span class="cov8" title="1">row = (up + down) / 2</span>
+        }
+        // 再在一行中进行二分查找
+        <span class="cov8" title="1">return common.IntArrayBinaryFind(matrix[row], target) &gt;= 0</span>
+}
+</pre>
+		
+		<pre class="file" id="file37" style="display: none">package p0
+
+/*
+75. 颜色分类
+
+给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
+
+此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。
+
+注意:
+不能使用代码库中的排序函数来解决这道题。
+
+示例:
+输入: [2,0,2,1,1,0]
+输出: [0,0,1,1,2,2]
+
+进阶：
+
+一个直观的解决方案是使用计数排序的两趟扫描算法。
+首先，迭代计算出0、1 和 2 元素的个数，然后按照0、1、2的排序，重写当前数组。
+你能想出一个仅使用常数空间的一趟扫描算法吗？
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/sort-colors
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func sortColors(nums []int) <span class="cov8" title="1">{
+        /*
+                大致思路： 从左向右扫描，遇到0就丢到左边，遇到2就丢到右边。一共标记三个指针（左、中、右）。
+                执行用时 :        0 ms        , 在所有 Go 提交中击败了        100.00%        的用户
+                内存消耗 :        2 MB        , 在所有 Go 提交中击败了        100.00%        的用户
+        */
+        if len(nums) &lt;= 1 </span><span class="cov0" title="0">{
+                return
+        }</span>
+
+        // left 是 下一个放置0的位置。right是下一个2的位置。
+        <span class="cov8" title="1">var left, right = 0, len(nums) - 1
+        for left &lt;= right &amp;&amp; nums[left] == 0 </span><span class="cov8" title="1">{
+                left++
+        }</span>
+        <span class="cov8" title="1">for left &lt;= right &amp;&amp; nums[right] == 2 </span><span class="cov8" title="1">{
+                right--
+        }</span>
+
+        // 用now作为当前索引，遍历一次
+        <span class="cov8" title="1">for now := left; now &lt;= right; </span><span class="cov8" title="1">{
+                switch nums[now] </span>{
+                case 0:<span class="cov8" title="1">
+                        if now != left </span><span class="cov8" title="1">{
+                                nums[now], nums[left] = nums[left], nums[now]
+                        }</span>
+                        <span class="cov8" title="1">left++
+                        // left 指向的是非0索引，理论上可能是1或2。但此时由于是从左向右遍历，因此左边不可能剩下2。
+                        // 因此left只会指向1，因此 now 可以放心前进一步。
+                        now++</span>
+                case 1:<span class="cov8" title="1">
+                        now++</span>
+                case 2:<span class="cov8" title="1">
+                        nums[now], nums[right] = nums[right], nums[now]
+                        right--</span>
+                        // right 指向的是非2索引，理论上可能是1或0。
+                        // 因此 now 不能前进，等下一个循环再判断一次。
+                }
+        }
+}
+</pre>
+		
+		<pre class="file" id="file38" style="display: none">package p0
+
+/*
+77. 组合
+
+给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合。
+
+示例:
+
+输入: n = 4, k = 2
+输出:
+[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/combinations
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func combine(n int, k int) [][]int <span class="cov8" title="1">{
+        /*
+                大致思路： (回朔法)小数放前面，大数放后面。用迭代的思路，下一层迭代只能使用比上一层更大的数字。
+                执行用时 :        12 ms        , 在所有 Go 提交中击败了        76.79%        的用户
+                内存消耗 :        6.3 MB        , 在所有 Go 提交中击败了        100.00%        的用户
+
+                其他思路： 动态规划法。用公式表达 combine(n,k) = combine(n,k-1)+combine(n-1,k-1)。缺点是空间复杂度爆炸。
+                官方题解： 字典序 (二进制排序) 组合
+        */
+        var mod = make([]int, k)
+        var result [][]int
+        return combineRecur(result, mod, 0, 1, n)
+}</span>
+
+func combineRecur(result [][]int, mod []int, pos, left, right int) [][]int <span class="cov8" title="1">{
+        if pos == len(mod)-1 </span><span class="cov8" title="1">{
+                for i := left; i &lt;= right; i++ </span><span class="cov8" title="1">{
+                        mod[pos] = i
+                        var newMod = make([]int, len(mod))
+                        copy(newMod, mod)
+                        result = append(result, newMod)
+                }</span>
+        } else<span class="cov8" title="1"> {
+                for i := left; i &lt;= right; i++ </span><span class="cov8" title="1">{
+                        mod[pos] = i
+                        result = combineRecur(result, mod, pos+1, i+1, right)
+                }</span>
+        }
+        <span class="cov8" title="1">return result</span>
+}
+</pre>
+		
+		<pre class="file" id="file39" style="display: none">package p0
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+82. 删除排序链表中的重复元素 II
+
+给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
+
+示例 1:
+
+输入: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5
+输出: 1-&gt;2-&gt;5
+示例 2:
+
+输入: 1-&gt;1-&gt;1-&gt;2-&gt;3
+输出: 2-&gt;3
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+*/
+func deleteDuplicates(head *ListNode) *ListNode <span class="cov8" title="1">{
+        left := &amp;ListNode{}
+        newHead := left
+        for right := head; right != nil; right = right.Next </span><span class="cov8" title="1">{
+                dupFlag := false
+                for right.Next != nil &amp;&amp; right.Val == right.Next.Val </span><span class="cov8" title="1">{
+                        dupFlag = true
+                        right = right.Next
+                }</span>
+                <span class="cov8" title="1">if !dupFlag </span><span class="cov8" title="1">{
+                        left.Next = right
+                        left = right
+                }</span>
+        }
+        <span class="cov8" title="1">left.Next = nil
+        return newHead.Next</span>
+}
+
+func deleteDuplicates1(head *ListNode) *ListNode <span class="cov0" title="0">{
+        var dupMap = map[int]bool{}
+        // 用map记录重复值
+        for p := head; p != nil; p = p.Next </span><span class="cov0" title="0">{
+                _, ok := dupMap[p.Val]
+                if ok </span><span class="cov0" title="0">{
+                        dupMap[p.Val] = true
+                }</span> else<span class="cov0" title="0"> {
+                        dupMap[p.Val] = false
+                }</span>
+        }
+        // 删除重复节点
+        <span class="cov0" title="0">left := &amp;ListNode{}
+        newHead := left
+        for right := head; right != nil; right = right.Next </span><span class="cov0" title="0">{
+                if !dupMap[right.Val] </span><span class="cov0" title="0">{
+                        left.Next = right
+                        left = right
+                }</span>
+        }
+        <span class="cov0" title="0">left.Next = nil
+        return newHead.Next</span>
+}
+</pre>
+		
+		<pre class="file" id="file40" style="display: none">package p0
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+86. 分隔链表
+
+给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前。
+
+你应当保留两个分区中每个节点的初始相对位置。
+
+示例:
+
+输入: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3
+输出: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/partition-list
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+*/
+func partition(head *ListNode, x int) *ListNode <span class="cov8" title="1">{
+        var smallHead, bigHead = &amp;ListNode{}, &amp;ListNode{}
+        var smallTail, bigTail = smallHead, bigHead
+        for p := head; p != nil; p = p.Next </span><span class="cov8" title="1">{
+                if p.Val &lt; x </span><span class="cov8" title="1">{
+                        smallTail.Next = p
+                        smallTail = p
+                }</span> else<span class="cov8" title="1"> {
+                        bigTail.Next = p
+                        bigTail = p
+                }</span>
+        }
+        <span class="cov8" title="1">bigTail.Next = nil
+        smallTail.Next = bigHead.Next
+        return smallHead.Next</span>
+}
+</pre>
+		
+		<pre class="file" id="file41" style="display: none">package p0
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+92. 反转链表 II
+
+反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
+
+说明:
+1 ≤ m ≤ n ≤ 链表长度。
+
+示例:
+
+输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
+输出: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/reverse-linked-list-ii
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+* Definition for singly-linked list.
+* type ListNode struct {
+*     Val int
+*     Next *ListNode
+* }
+*/
+func reverseBetween(head *ListNode, m int, n int) *ListNode <span class="cov8" title="1">{
+        if m == n </span><span class="cov0" title="0">{
+                return head
+        }</span>
+        <span class="cov8" title="1">var dumHead = &amp;ListNode{Next: head}
+        var start = dumHead
+        for i := 1; i &lt; m; i++ </span><span class="cov8" title="1">{
+                start = start.Next
+        }</span>
+
+        <span class="cov8" title="1">var a, b, c *ListNode
+        a = start // start, a, b, c 都不会是nil，因为m&lt;n&lt;=链表长度
+        b = a.Next
+        c = b.Next
+        for i := m; i &lt; n; i++ </span><span class="cov8" title="1">{
+                a, b, c = b, c, c.Next
+                b.Next = a
+        }</span>
+        <span class="cov8" title="1">start.Next, start.Next.Next = b, c
+        return dumHead.Next</span>
+}
+</pre>
+		
+		<pre class="file" id="file42" style="display: none">package p1
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+109. 有序链表转换二叉搜索树
+
+给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
+
+本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。
+
+示例:
+
+给定的有序链表： [-10, -3, 0, 5, 9],
+
+一个可能的答案是：[0, -3, 9, -10, null, 5], 它可以表示下面这个高度平衡二叉搜索树：
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func sortedListToBST(head *ListNode) *TreeNode <span class="cov8" title="1">{
+        if head == nil </span><span class="cov8" title="1">{
+                return nil
+        }</span>
+        // 用快慢指针找到中点，并在中点前后将链表切分成两部分
+        <span class="cov8" title="1">var before, slow, fast *ListNode = nil, head, head.Next
+        for fast != nil &amp;&amp; fast.Next != nil </span><span class="cov8" title="1">{
+                before = slow
+                slow = slow.Next
+                fast = fast.Next.Next
+        }</span>
+        // 递归
+        <span class="cov8" title="1">if before != nil </span><span class="cov8" title="1">{
+                before.Next = nil
+                return &amp;TreeNode{Val: slow.Val, Left: sortedListToBST(head), Right: sortedListToBST(slow.Next)}
+        }</span> else<span class="cov8" title="1"> {
+                return &amp;TreeNode{Val: slow.Val, Right: sortedListToBST(slow.Next)}
+        }</span>
+}
+</pre>
+		
+		<pre class="file" id="file43" style="display: none">package p1
+
+/*
+121. 买卖股票的最佳时机
+
+给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+
+如果你最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。
+
+注意你不能在买入股票前卖出股票。
+
+示例 1:
+
+输入: [7,1,5,3,6,4]
+输出: 5
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
+     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。
+
+示例 2:
+
+输入: [7,6,4,3,1]
+输出: 0
+解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func maxProfit(prices []int) int <span class="cov8" title="1">{
+        var maxP = 0
+        var low = 1 &lt;&lt; 30
+        for _, price := range prices </span><span class="cov8" title="1">{
+                if price &lt; low </span><span class="cov8" title="1">{
+                        low = price
+                }</span>
+                <span class="cov8" title="1">if price-low &gt; maxP </span><span class="cov8" title="1">{
+                        maxP = price - low
+                }</span>
+        }
+        <span class="cov8" title="1">return maxP</span>
+}
+</pre>
+		
+		<pre class="file" id="file44" style="display: none">package p1
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+141. 环形链表
+
+给定一个链表，判断链表中是否有环。
+
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
+
+示例 1：
+
+输入：head = [3,2,0,-4], pos = 1
+输出：true
+解释：链表中有一个环，其尾部连接到第二个节点。
+
+示例 2：
+
+输入：head = [1,2], pos = 0
+输出：true
+解释：链表中有一个环，其尾部连接到第一个节点。
+
+示例 3：
+
+输入：head = [1], pos = -1
+输出：false
+解释：链表中没有环。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/linked-list-cycle
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+*/
+func hasCycle(head *ListNode) bool <span class="cov8" title="1">{
+        var slow, fast *ListNode = &amp;ListNode{Next: head}, head
+        for fast != nil &amp;&amp; fast.Next != nil </span><span class="cov8" title="1">{
+                if fast == slow || fast.Next == slow </span><span class="cov8" title="1">{
+                        return true
+                }</span>
+                <span class="cov8" title="1">slow = slow.Next
+                fast = fast.Next.Next</span>
+        }
+        <span class="cov8" title="1">return false</span>
+}
+</pre>
+		
+		<pre class="file" id="file45" style="display: none">package p1
+
+import (
+        . "github.com/Saodd/leetcode-algo/common"
+)
+
+/*
+148. 排序链表
+
+在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
+
+示例 1:
+
+输入: 4-&gt;2-&gt;1-&gt;3
+输出: 1-&gt;2-&gt;3-&gt;4
+
+示例 2:
+
+输入: -1-&gt;5-&gt;3-&gt;4-&gt;0
+输出: -1-&gt;0-&gt;3-&gt;4-&gt;5
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/sort-list
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+*/
+func sortList(head *ListNode) *ListNode <span class="cov8" title="1">{
+        // 划分终点
+        if head == nil || head.Next == nil </span><span class="cov8" title="1">{
+                return head
+        }</span>
+        // 把链表对半划分
+        <span class="cov8" title="1">var slow, fast = head, head
+        for fast.Next != nil &amp;&amp; fast.Next.Next != nil </span><span class="cov8" title="1">{
+                slow = slow.Next
+                fast = fast.Next.Next
+        }</span>
+        // 递归，分别对两半链表排序
+        <span class="cov8" title="1">head2 := sortList(slow.Next)
+        slow.Next = nil
+        head = sortList(head)
+        // 合并两个有序链表
+        if head2 == nil </span><span class="cov0" title="0">{
+                return head
+        }</span>
+        <span class="cov8" title="1">var newHead *ListNode
+        if head.Val &lt;= head2.Val </span><span class="cov8" title="1">{
+                newHead = head
+                head = head.Next
+                if head == nil </span><span class="cov8" title="1">{
+                        newHead.Next = head2
+                        return newHead
+                }</span>
+        } else<span class="cov8" title="1"> {
+                newHead = head2
+                head2 = head2.Next
+                if head2 == nil </span><span class="cov8" title="1">{
+                        newHead.Next = head
+                        return newHead
+                }</span>
+        }
+        <span class="cov8" title="1">var p = newHead
+        for </span><span class="cov8" title="1">{
+                if head.Val &lt;= head2.Val </span><span class="cov8" title="1">{
+                        p.Next = head
+                        p = head
+                        head = head.Next
+                        if head == nil </span><span class="cov8" title="1">{
+                                p.Next = head2
+                                break</span>
+                        }
+                } else<span class="cov8" title="1"> {
+                        p.Next = head2
+                        p = head2
+                        head2 = head2.Next
+                        if head2 == nil </span><span class="cov8" title="1">{
+                                p.Next = head
+                                break</span>
+                        }
+                }
+        }
+        <span class="cov8" title="1">return newHead</span>
+}
+</pre>
+		
+		<pre class="file" id="file46" style="display: none">package p1
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+160. 相交链表
+
+编写一个程序，找到两个单链表相交的起始节点。
+
+注意：
+
+如果两个链表没有交点，返回 null.
+在返回结果后，两个链表仍须保持原有的结构。
+可假定整个链表结构中没有循环。
+程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func getIntersectionNode(headA, headB *ListNode) *ListNode <span class="cov0" title="0">{
+        if headA == nil || headB == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+        <span class="cov0" title="0">var a, b = headA, headB
+        var goA, goB = true, true
+        for goA || goB </span><span class="cov0" title="0">{
+                if a.Next == nil </span><span class="cov0" title="0">{
+                        a = headB
+                        goA = false
+                }</span> else<span class="cov0" title="0"> {
+                        a = a.Next
+                }</span>
+                <span class="cov0" title="0">if b.Next == nil </span><span class="cov0" title="0">{
+                        b = headA
+                        goB = false
+                }</span> else<span class="cov0" title="0"> {
+                        b = b.Next
+                }</span>
+        }
+        <span class="cov0" title="0">for a != nil </span><span class="cov0" title="0">{
+                if a == b </span><span class="cov0" title="0">{
+                        return a
+                }</span>
+                <span class="cov0" title="0">a = a.Next
+                b = b.Next</span>
+        }
+        <span class="cov0" title="0">return nil</span>
+}
+
+func getIntersectionNode1(headA, headB *ListNode) *ListNode <span class="cov0" title="0">{
+        if headA == nil || headB == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+        // 找到A链表的尾部
+        <span class="cov0" title="0">var tailA = headA
+        for ; tailA.Next != nil; tailA = tailA.Next </span>{<span class="cov0" title="0">
+        }</span>
+        // 把A链表收尾相连做成环，最后要恢复原样
+        <span class="cov0" title="0">tailA.Next = headA
+        defer func() </span><span class="cov0" title="0">{ tailA.Next = nil }</span>()
+        // 142题算法
+        <span class="cov0" title="0">return detectCycle(headB)</span>
+}
+</pre>
+		
+		<pre class="file" id="file47" style="display: none">package p1
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+142. 环形链表 II
+
+给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+
+为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。
+如果 pos 是 -1，则在该链表中没有环。
+
+说明：不允许修改给定的链表。
+
+示例 1：
+
+输入：head = [3,2,0,-4], pos = 1
+输出：tail connects to node index 1
+解释：链表中有一个环，其尾部连接到第二个节点。
+
+示例 2：
+
+输入：head = [1,2], pos = 0
+输出：tail connects to node index 0
+解释：链表中有一个环，其尾部连接到第一个节点。
+
+示例 3：
+
+输入：head = [1], pos = -1
+输出：no cycle
+解释：链表中没有环。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/linked-list-cycle-ii
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+*/
+func detectCycle(head *ListNode) *ListNode <span class="cov8" title="1">{
+        if head == nil || head.Next == nil </span><span class="cov8" title="1">{
+                return nil
+        }</span>
+        <span class="cov8" title="1">var slow, fast = head, head.Next
+        for slow != fast </span><span class="cov8" title="1">{
+                if fast == nil || fast.Next == nil </span><span class="cov0" title="0">{
+                        return nil
+                }</span>
+                <span class="cov8" title="1">slow = slow.Next
+                fast = fast.Next.Next</span>
+        }
+        <span class="cov8" title="1">fast = fast.Next
+        slow = head
+        for slow != fast </span><span class="cov8" title="1">{
+                slow = slow.Next
+                fast = fast.Next
+        }</span>
+        <span class="cov8" title="1">return slow</span>
+}
+</pre>
+		
+		<pre class="file" id="file48" style="display: none">package p3
+
+import . "github.com/Saodd/leetcode-algo/common"
+
+/*
+328. 奇偶链表
+
+给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。
+请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
+
+请尝试使用原地算法完成。你的算法的空间复杂度应为 O(1)，时间复杂度应为 O(nodes)，nodes 为节点总数。
+
+示例 1:
+
+输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
+输出: 1-&gt;3-&gt;5-&gt;2-&gt;4-&gt;NULL
+
+示例 2:
+
+输入: 2-&gt;1-&gt;3-&gt;5-&gt;6-&gt;4-&gt;7-&gt;NULL
+输出: 2-&gt;3-&gt;6-&gt;7-&gt;1-&gt;5-&gt;4-&gt;NULL
+
+说明:
+
+应当保持奇数节点和偶数节点的相对顺序。
+链表的第一个节点视为奇数节点，第二个节点视为偶数节点，以此类推。
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/odd-even-linked-list
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+func oddEvenList(head *ListNode) *ListNode <span class="cov8" title="1">{
+        var oddHead, evenHead = &amp;ListNode{}, &amp;ListNode{}
+        var odd, even = oddHead, evenHead
+        var isOdd = true
+        for p := head; p != nil; p = p.Next </span><span class="cov8" title="1">{
+                if isOdd </span><span class="cov8" title="1">{
+                        odd.Next = p
+                        odd = p
+                }</span> else<span class="cov8" title="1"> {
+                        even.Next = p
+                        even = p
+                }</span>
+                <span class="cov8" title="1">isOdd = !isOdd</span>
+        }
+        <span class="cov8" title="1">odd.Next = evenHead.Next
+        even.Next = nil
+        return oddHead.Next</span>
+        // 手写完成时间：5'20"
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
