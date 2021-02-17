@@ -1,4 +1,4 @@
-package offer
+package q0046
 
 import (
 	"strconv"
