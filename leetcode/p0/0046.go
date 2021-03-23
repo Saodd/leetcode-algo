@@ -1,6 +1,7 @@
 package p0
 
 import (
+	"github.com/Saodd/leetcode-algo/leetcode/p0/q0031"
 	"sort"
 )
 
@@ -44,7 +45,7 @@ func permute(nums []int) [][]int {
 	sort.Ints(nums)
 	copy(result[0], nums)
 	for i := 1; i < total; i++ {
-		NextPermutation(nums)
+		q0031.NextPermutation(nums)
 		copy(result[i], nums)
 	}
 

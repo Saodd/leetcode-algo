@@ -1,7 +1,3 @@
-package p0
-
-import . "github.com/Saodd/leetcode-algo/common"
-
 /*
 将两个有序链表合并为一个新的有序链表并返回。
 新链表是通过拼接给定的两个链表的所有节点组成的。
@@ -15,6 +11,13 @@ import . "github.com/Saodd/leetcode-algo/common"
 链接：https://leetcode-cn.com/problems/merge-two-sorted-lists
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
+package q0021
+
+import "github.com/Saodd/leetcode-algo/common"
+
+type ListNode = common.ListNode
+type Solution func(*ListNode, *ListNode) *ListNode
+
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l2 == nil {
 		return l1

@@ -1,10 +1,3 @@
-package p0
-
-import (
-	"fmt"
-	"github.com/Saodd/leetcode-algo/common"
-)
-
 /*
 实现获取下一个排列的函数，算法需要将给定数字序列
 重新排列成字典序中下一个更大的排列。
@@ -23,49 +16,11 @@ import (
 链接：https://leetcode-cn.com/problems/next-permutation
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func NextPermutation(nums []int) {
-	fmt.Println()
-	if len(nums) < 2 {
-		return
-	}
-	var top int
-	for top = len(nums) - 1; top > 0; top-- {
-		if nums[top-1] < nums[top] {
-			break
-		}
-	}
-	if top == 0 {
-		swapSortInt(nums)
-		return
-	}
-	exchId := indexOfMinGreater(nums[top:], nums[top-1]) + top
-	nums[top-1], nums[exchId] = nums[exchId], nums[top-1]
-	swapSortInt(nums[top:])
-	return
-}
+package q0031
 
-// 二分查找
-func indexOfMinGreater(nums []int, target int) int {
-	var gt, lt int
-	for gt, lt = 0, len(nums); lt-gt > 1; {
-		mid := (gt + lt) / 2
-		if nums[mid] > target {
-			gt = mid
-		} else {
-			lt = mid
-		}
-	}
-	return gt
-}
-
-// 交换排序
-func swapSortInt(nums []int) {
-	for i, j := 0, len(nums)-1; i < j; {
-		nums[i], nums[j] = nums[j], nums[i]
-		i++
-		j--
-	}
-}
+import (
+	"github.com/Saodd/leetcode-algo/common"
+)
 
 func nextPermutation1(nums []int) {
 	if len(nums) < 2 {
