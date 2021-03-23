@@ -1,8 +1,10 @@
-package p0
+package q0033
 
 import (
 	"testing"
 )
+
+type Solution func(nums []int, target int) int
 
 func Test_indexOfMin(t *testing.T) {
 	type args struct {
@@ -71,16 +73,18 @@ func Test_binarySearch(t *testing.T) {
 	}
 }
 
-func Test_search(t *testing.T) {
-	type args struct {
-		nums   []int
-		target int
-	}
-	tests := []struct {
-		name string
-		args args
-		want int
-	}{
+type args struct {
+	nums   []int
+	target int
+}
+type Case struct {
+	name string
+	args args
+	want int
+}
+
+func buildTests() []Case {
+	return []Case{
 		{
 			args: args{[]int{1, 3}, 0},
 			want: -1,
@@ -93,12 +97,43 @@ func Test_search(t *testing.T) {
 			args: args{[]int{4, 5, 6, 7, 0, 1, 2}, 3},
 			want: -1,
 		},
+		{
+			name: "错误1",
+			args: args{[]int{1}, 1},
+			want: 0,
+		},
+		{
+			name: "错误2",
+			args: args{[]int{1, 3}, 1},
+			want: 0,
+		},
+		{
+			name: "错误3",
+			args: args{[]int{1, 3}, 3},
+			want: 1,
+		},
+		{
+			name: "错误4",
+			args: args{[]int{1, 3, 5}, 1},
+			want: 0,
+		},
 	}
+}
+
+func do(t *testing.T, f Solution) {
+	tests := buildTests()
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := search(tt.args.nums, tt.args.target); got != tt.want {
+			if got := f(tt.args.nums, tt.args.target); got != tt.want {
 				t.Errorf("search() = %v, want %v", got, tt.want)
 			}
 		})
 	}
+}
+
+func Test_search(t *testing.T) {
+	do(t, search)
+}
+func Test_search2(t *testing.T) {
+	do(t, search2)
 }
