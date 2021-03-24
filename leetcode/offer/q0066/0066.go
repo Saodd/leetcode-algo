@@ -30,8 +30,10 @@ func constructArr(a []int) []int {
 	if len(a) == 0 {
 		return []int{}
 	}
-	b := []int{1}
-	b[0] = 1
+	b := make([]int, len(a))
+	for i := range b {
+		b[i] = 1
+	}
 
 	// 从左向右
 	var product int = 1

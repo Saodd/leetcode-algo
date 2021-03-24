@@ -30,9 +30,15 @@
 */
 package q0095
 
+import (
+	"github.com/Saodd/leetcode-algo/helper/treenode"
+)
+
+type TreeNode = treenode.TreeNode
+
 func generateTrees(n int) []*TreeNode {
 	nums := make([]int, n)
-	for i, _ := range nums {
+	for i := range nums {
 		nums[i] = i + 1
 	}
 	nodes := Run(nums)
@@ -60,10 +66,4 @@ func Run(nums []int) (nodes []*TreeNode) {
 		}
 	}
 	return
-}
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
 }
