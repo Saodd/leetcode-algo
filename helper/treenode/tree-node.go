@@ -85,10 +85,10 @@ func Unmarshal(words []string) (root *TreeNode) {
 		}
 
 		layer = nextLayer
-		if len(words) < width {
+		if len(words) <= width {
 			words = words[:0]
 		} else {
-			words = words[:width]
+			words = words[width:]
 		}
 	}
 }

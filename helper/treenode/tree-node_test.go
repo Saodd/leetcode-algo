@@ -74,6 +74,26 @@ func TestUnmarshal(t *testing.T) {
 			wantRoot: nil,
 		},
 		{
+			name:     "用例3",
+			args:     args{[]string{"2", "1", "3"}},
+			wantRoot: &TreeNode{Val: 2, Left: &TreeNode{Val: 1}, Right: &TreeNode{Val: 3}},
+		},
+		{
+			name: "用例4",
+			args: args{[]string{"1", "2", "3", "4", "5", "6"}},
+			wantRoot: &TreeNode{
+				Val: 1,
+				Left: &TreeNode{
+					Val:   2,
+					Left:  &TreeNode{Val: 4},
+					Right: &TreeNode{Val: 5},
+				},
+				Right: &TreeNode{
+					Val:  3,
+					Left: &TreeNode{Val: 6},
+				}},
+		},
+		{
 			name:     "互相测试1",
 			args:     args{Marshal(Unmarshal([]string{"0", "0", "null", "0", "null", "null", "null"}))},
 			wantRoot: &TreeNode{Left: &TreeNode{Left: &TreeNode{}}},
