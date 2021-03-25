@@ -27,3 +27,15 @@ func Marshal(head *ListNode) []int {
 	}
 	return res
 }
+
+func Concat(front, back *ListNode) *ListNode {
+	if front == nil {
+		return back
+	}
+	var tail = front
+	for tail.Next != nil {
+		tail = tail.Next
+	}
+	tail.Next = back
+	return front
+}

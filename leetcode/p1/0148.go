@@ -1,9 +1,5 @@
 package p1
 
-import (
-	. "github.com/Saodd/leetcode-algo/common"
-)
-
 /*
 148. 排序链表
 

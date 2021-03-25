@@ -1,7 +1,5 @@
 package p1
 
-import . "github.com/Saodd/leetcode-algo/common"
-
 /*
 141. 环形链表
 

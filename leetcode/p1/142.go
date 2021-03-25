@@ -1,6 +1,6 @@
 package p1
 
-import . "github.com/Saodd/leetcode-algo/common"
+import "github.com/Saodd/leetcode-algo/helper/listnode"
 
 /*
 142. 环形链表 II
@@ -60,3 +60,7 @@ func detectCycle(head *ListNode) *ListNode {
 	}
 	return slow
 }
+
+type ListNode = listnode.ListNode
+
+var DetectCycle = detectCycle

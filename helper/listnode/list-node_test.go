@@ -77,3 +77,28 @@ func TestMarshal(t *testing.T) {
 		})
 	}
 }
+
+func TestConcat(t *testing.T) {
+	type args struct {
+		front *ListNode
+		back  *ListNode
+	}
+	tests := []struct {
+		name string
+		args args
+		want *ListNode
+	}{
+		{
+			name: "用例1",
+			args: args{Unmarshal([]int{1, 2, 3}), Unmarshal([]int{4, 5, 6})},
+			want: Unmarshal([]int{1, 2, 3, 4, 5, 6}),
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := Concat(tt.args.front, tt.args.back); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("Concat() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

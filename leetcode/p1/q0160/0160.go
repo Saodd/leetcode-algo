@@ -1,9 +1,6 @@
-package p1
-
-import . "github.com/Saodd/leetcode-algo/common"
-
 /*
 160. 相交链表
+难度：简单（中等）
 
 编写一个程序，找到两个单链表相交的起始节点。
 
@@ -18,7 +15,16 @@ import . "github.com/Saodd/leetcode-algo/common"
 链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-func getIntersectionNode(headA, headB *ListNode) *ListNode {
+package q0160
+
+import (
+	"github.com/Saodd/leetcode-algo/helper/listnode"
+	"github.com/Saodd/leetcode-algo/leetcode/p1"
+)
+
+type ListNode = listnode.ListNode
+
+func getIntersectionNode2(headA, headB *ListNode) *ListNode {
 	if headA == nil || headB == nil {
 		return nil
 	}
@@ -60,5 +66,5 @@ func getIntersectionNode1(headA, headB *ListNode) *ListNode {
 	tailA.Next = headA
 	defer func() { tailA.Next = nil }()
 	// 142题算法
-	return detectCycle(headB)
+	return p1.DetectCycle(headB)
 }

@@ -1,6 +1,6 @@
 package p1
 
-import . "github.com/Saodd/leetcode-algo/common"
+import "github.com/Saodd/leetcode-algo/helper/treenode"
 
 /*
 109. 有序链表转换二叉搜索树
@@ -44,3 +44,5 @@ func sortedListToBST(head *ListNode) *TreeNode {
 		return &TreeNode{Val: slow.Val, Right: sortedListToBST(slow.Next)}
 	}
 }
+
+type TreeNode = treenode.TreeNode
