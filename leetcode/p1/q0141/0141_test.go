@@ -1,13 +1,13 @@
-package p1
+package q0141
 
 import (
-	"github.com/Saodd/leetcode-algo/common"
+	"github.com/Saodd/leetcode-algo/helper/listnode"
 	"testing"
 )
 
 func Test_hasCycle(t *testing.T) {
 	type args struct {
-		head *common.ListNode
+		head *ListNode
 	}
 	tests := []struct {
 		name string
@@ -16,17 +16,17 @@ func Test_hasCycle(t *testing.T) {
 	}{
 		{
 			name: "示例1",
-			args: args{common.CreateListChainCycle([]int{3, 2, 0, -4}, 1)},
+			args: args{listnode.NewListWithCycle([]int{3, 2, 0, -4}, 1)},
 			want: true,
 		},
 		{
 			name: "示例2",
-			args: args{common.CreateListChainCycle([]int{1, 2}, 0)},
+			args: args{listnode.NewListWithCycle([]int{1, 2}, 0)},
 			want: true,
 		},
 		{
 			name: "示例3",
-			args: args{common.CreateListChainCycle([]int{1}, -1)},
+			args: args{listnode.NewListWithCycle([]int{1}, -1)},
 			want: false,
 		},
 	}

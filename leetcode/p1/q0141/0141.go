@@ -1,7 +1,6 @@
-package p1
-
 /*
 141. 环形链表
+难度：简单
 
 给定一个链表，判断链表中是否有环。
 
@@ -13,7 +12,7 @@ package p1
 输出：true
 解释：链表中有一个环，其尾部连接到第二个节点。
 
-示例 2：
+示例2：
 
 输入：head = [1,2], pos = 0
 输出：true
@@ -28,17 +27,28 @@ package p1
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/linked-list-cycle
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+*/
+package q0141
 
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
+import (
+	"github.com/Saodd/leetcode-algo/helper/listnode"
+)
+
+type ListNode = listnode.ListNode
+
+/*
+2021-03-27（难度：简单）
+执行用时：8 ms, 在所有 Go 提交中击败了82.99%的用户
+内存消耗：4.3 MB, 在所有 Go 提交中击败了24.45%的用户
 */
 func hasCycle(head *ListNode) bool {
-	var slow, fast *ListNode = &ListNode{Next: head}, head
+	if head == nil {
+		return false
+	}
+
+	var slow, fast = head, head.Next
 	for fast != nil && fast.Next != nil {
-		if fast == slow || fast.Next == slow {
+		if slow == fast {
 			return true
 		}
 		slow = slow.Next

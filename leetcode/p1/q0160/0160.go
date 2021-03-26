@@ -19,7 +19,7 @@ package q0160
 
 import (
 	"github.com/Saodd/leetcode-algo/helper/listnode"
-	"github.com/Saodd/leetcode-algo/leetcode/p1"
+	"github.com/Saodd/leetcode-algo/leetcode/p1/q0142"
 )
 
 type ListNode = listnode.ListNode
@@ -66,5 +66,5 @@ func getIntersectionNode1(headA, headB *ListNode) *ListNode {
 	tailA.Next = headA
 	defer func() { tailA.Next = nil }()
 	// 142题算法
-	return p1.DetectCycle(headB)
+	return q0142.DetectCycle(headB)
 }

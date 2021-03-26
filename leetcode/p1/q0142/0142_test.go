@@ -1,28 +1,29 @@
-package p1
+package q0142
 
 import (
-	"github.com/Saodd/leetcode-algo/common"
+	"github.com/Saodd/leetcode-algo/helper/listnode"
 	"reflect"
 	"testing"
 )
 
 func Test_detectCycle(t *testing.T) {
-	chain1 := common.CreateListChainCycle([]int{3, 2, 0, -4}, 1)
-	chain2 := common.CreateListChainCycle([]int{1, 2}, 0)
-	chain3 := common.CreateListChainCycle([]int{1}, -1)
+	chain1 := listnode.NewListWithCycle([]int{3, 2, 0, -4}, 1)
+	chain2 := listnode.NewListWithCycle([]int{1, 2}, 0)
+	chain3 := listnode.NewListWithCycle([]int{1}, -1)
+	chain4 := listnode.NewListWithCycle([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 9)
 
 	type args struct {
-		head *common.ListNode
+		head *ListNode
 	}
 	tests := []struct {
 		name string
 		args args
-		want *common.ListNode
+		want *ListNode
 	}{
 		{
 			name: "示例1",
 			args: args{head: chain1},
-			want: chain1.Next,
+			want: listnode.Walk(chain1, 1),
 		},
 		{
 			name: "示例2",
@@ -33,6 +34,11 @@ func Test_detectCycle(t *testing.T) {
 			name: "示例3",
 			args: args{head: chain3},
 			want: nil,
+		},
+		{
+			name: "自测1",
+			args: args{head: chain4},
+			want: listnode.Walk(chain4, 9),
 		},
 	}
 	for _, tt := range tests {
