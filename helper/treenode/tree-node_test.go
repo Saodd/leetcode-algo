@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestMarshal(t *testing.T) {
+func TestFormat(t *testing.T) {
 	type args struct {
 		t *TreeNode
 	}
@@ -42,14 +42,14 @@ func TestMarshal(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Marshal(tt.args.t); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Marshal() = %v, want %v", got, tt.want)
+			if got := Format(tt.args.t); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("Format() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func TestUnmarshal(t *testing.T) {
+func TestNewTree(t *testing.T) {
 	type args struct {
 		words []string
 	}
@@ -95,19 +95,19 @@ func TestUnmarshal(t *testing.T) {
 		},
 		{
 			name:     "互相测试1",
-			args:     args{Marshal(Unmarshal([]string{"0", "0", "null", "0", "null", "null", "null"}))},
+			args:     args{Format(NewTree([]string{"0", "0", "null", "0", "null", "null", "null"}))},
 			wantRoot: &TreeNode{Left: &TreeNode{Left: &TreeNode{}}},
 		},
 		{
 			name:     "互相测试2",
 			args:     args{[]string{"0", "0", "null", "0", "null", "null", "null"}},
-			wantRoot: Unmarshal(Marshal(&TreeNode{Left: &TreeNode{Left: &TreeNode{}}})),
+			wantRoot: NewTree(Format(&TreeNode{Left: &TreeNode{Left: &TreeNode{}}})),
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if gotRoot := Unmarshal(tt.args.words); !reflect.DeepEqual(gotRoot, tt.wantRoot) {
-				t.Errorf("Unmarshal() = %v, want %v", gotRoot, tt.wantRoot)
+			if gotRoot := NewTree(tt.args.words); !reflect.DeepEqual(gotRoot, tt.wantRoot) {
+				t.Errorf("NewTree() = %v, want %v", gotRoot, tt.wantRoot)
 			}
 		})
 	}

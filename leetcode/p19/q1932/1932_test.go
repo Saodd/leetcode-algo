@@ -16,17 +16,17 @@ func Test_isValidBST(t *testing.T) {
 	}{
 		{
 			name: "官方用例1",
-			args: args{treenode.Unmarshal([]string{"2", "1", "3"})},
+			args: args{treenode.NewTree([]string{"2", "1", "3"})},
 			want: true,
 		},
 		{
 			name: "官方用例2",
-			args: args{treenode.Unmarshal([]string{"5", "1", "4", "null", "null", "3", "6"})},
+			args: args{treenode.NewTree([]string{"5", "1", "4", "null", "null", "3", "6"})},
 			want: false,
 		},
 		{
 			name: "错误1",
-			args: args{treenode.Unmarshal([]string{"10", "5", "15", "null", "null", "6", "20"})},
+			args: args{treenode.NewTree([]string{"10", "5", "15", "null", "null", "6", "20"})},
 			want: false,
 		},
 	}

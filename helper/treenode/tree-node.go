@@ -10,7 +10,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func Marshal(t *TreeNode) []string {
+func Format(t *TreeNode) []string {
 	var res []string
 	layer := []*TreeNode{t}
 	next := true
@@ -42,7 +42,7 @@ func Marshal(t *TreeNode) []string {
 	return res
 }
 
-func Unmarshal(words []string) (root *TreeNode) {
+func NewTree(words []string) (root *TreeNode) {
 	if len(words) == 0 {
 		return
 	}

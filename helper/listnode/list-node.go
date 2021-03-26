@@ -5,7 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func Unmarshal(values []int) *ListNode {
+func NewList(values []int) *ListNode {
 	var head = &ListNode{}
 	var cur = head
 	for _, value := range values {
@@ -15,7 +15,7 @@ func Unmarshal(values []int) *ListNode {
 	return head.Next
 }
 
-func Marshal(head *ListNode) []int {
+func Format(head *ListNode) []int {
 	if head == nil {
 		return nil
 	}
@@ -47,7 +47,7 @@ func NewListWithCycle(li []int, pos int) *ListNode {
 	if pos >= len(li) {
 		panic("错误的输入！pos应该小于li的长度！")
 	}
-	head := Unmarshal(li)
+	head := NewList(li)
 	if pos >= 0 {
 		var insectNode *ListNode
 		var currentNode = &ListNode{Next: head}

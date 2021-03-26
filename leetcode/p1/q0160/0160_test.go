@@ -18,21 +18,21 @@ type Case struct {
 }
 
 func BuildCase() []Case {
-	l1 := listnode.Unmarshal([]int{1})
-	l2 := listnode.Unmarshal([]int{1, 2})
-	l5 := listnode.Unmarshal([]int{1, 2, 3, 4, 5})
-	l6 := listnode.Unmarshal([]int{1, 2, 3, 4, 5, 6})
+	l1 := listnode.NewList([]int{1})
+	l2 := listnode.NewList([]int{1, 2})
+	l5 := listnode.NewList([]int{1, 2, 3, 4, 5})
+	l6 := listnode.NewList([]int{1, 2, 3, 4, 5, 6})
 
-	h1a := listnode.Concat(listnode.Unmarshal([]int{100}), l1)
-	h1b := listnode.Concat(listnode.Unmarshal([]int{200, 201}), l1)
-	h2a := listnode.Concat(listnode.Unmarshal([]int{100}), l2)
-	h2b := listnode.Concat(listnode.Unmarshal([]int{200, 201}), l2)
-	h3a := listnode.Concat(listnode.Unmarshal([]int{100, 101, 102, 103}), l5)
-	h3b := listnode.Concat(listnode.Unmarshal([]int{200, 201, 202}), l5)
-	h4a := listnode.Concat(listnode.Unmarshal([]int{100, 101, 102, 103}), l6)
-	h4b := listnode.Concat(listnode.Unmarshal([]int{200, 201, 202}), l6)
-	h5a := listnode.Concat(listnode.Unmarshal([]int{100, 101, 102, 103, 104}), l6)
-	h5b := listnode.Concat(listnode.Unmarshal([]int{200, 201, 202, 203, 204, 205}), l6)
+	h1a := listnode.Concat(listnode.NewList([]int{100}), l1)
+	h1b := listnode.Concat(listnode.NewList([]int{200, 201}), l1)
+	h2a := listnode.Concat(listnode.NewList([]int{100}), l2)
+	h2b := listnode.Concat(listnode.NewList([]int{200, 201}), l2)
+	h3a := listnode.Concat(listnode.NewList([]int{100, 101, 102, 103}), l5)
+	h3b := listnode.Concat(listnode.NewList([]int{200, 201, 202}), l5)
+	h4a := listnode.Concat(listnode.NewList([]int{100, 101, 102, 103}), l6)
+	h4b := listnode.Concat(listnode.NewList([]int{200, 201, 202}), l6)
+	h5a := listnode.Concat(listnode.NewList([]int{100, 101, 102, 103, 104}), l6)
+	h5b := listnode.Concat(listnode.NewList([]int{200, 201, 202, 203, 204, 205}), l6)
 	return []Case{
 		{
 			name: "自测1",

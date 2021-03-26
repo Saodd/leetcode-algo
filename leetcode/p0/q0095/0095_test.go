@@ -32,7 +32,7 @@ func Test_generateTrees(t *testing.T) {
 			got := generateTrees(tt.args.n)
 			compare := make(map[string]int)
 			for _, tree := range got {
-				compare[strings.Join(treenode.Marshal(tree), ",")]++
+				compare[strings.Join(treenode.Format(tree), ",")]++
 			}
 			for _, words := range tt.want {
 				compare[strings.Join(words, ",")]--

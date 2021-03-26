@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestCreateListNode(t *testing.T) {
+func TestNewList(t *testing.T) {
 	type args struct {
 		values []int
 	}
@@ -32,14 +32,14 @@ func TestCreateListNode(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Unmarshal(tt.args.values); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Unmarshal() = %v, want %v", got, tt.want)
+			if got := NewList(tt.args.values); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("NewList() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func TestMarshal(t *testing.T) {
+func TestFormat(t *testing.T) {
 	type args struct {
 		head *ListNode
 	}
@@ -65,14 +65,14 @@ func TestMarshal(t *testing.T) {
 		},
 		{
 			name: "互相调用",
-			args: args{Unmarshal([]int{1, 2, 3})},
+			args: args{NewList([]int{1, 2, 3})},
 			want: []int{1, 2, 3},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Marshal(tt.args.head); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Marshal() = %v, want %v", got, tt.want)
+			if got := Format(tt.args.head); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("Format() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -90,8 +90,8 @@ func TestConcat(t *testing.T) {
 	}{
 		{
 			name: "用例1",
-			args: args{Unmarshal([]int{1, 2, 3}), Unmarshal([]int{4, 5, 6})},
-			want: Unmarshal([]int{1, 2, 3, 4, 5, 6}),
+			args: args{NewList([]int{1, 2, 3}), NewList([]int{4, 5, 6})},
+			want: NewList([]int{1, 2, 3, 4, 5, 6}),
 		},
 	}
 	for _, tt := range tests {
